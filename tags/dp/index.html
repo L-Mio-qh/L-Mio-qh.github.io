@@ -9,7 +9,7 @@
   
   <script>window.REIMU_CONFIG = {};window.REIMU_CONFIG.icon_font = '4552607_4k4bc36ef96';window.REIMU_CONFIG.clipboard_tips = {"success":{"zh-CN":"复制成功 (*^▽^*)"},"fail":{"zh-CN":"复制失败 (ﾟ⊿ﾟ)ﾂ"},"copyright":{"enable":false,"count":50,"license_type":"by-nc-sa"}};window.REIMU_CONFIG.clipboard_tips.copyright.content = '本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！';window.REIMU_CONFIG.code_block = {"expand":true};window.REIMU_CONFIG.base = 'http://example.com';</script>
   <title>
-    观察数据范围并根据数学公式进行枚举(CF2132B) | Mio_qh
+    标签: dp | Mio_qh
   </title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin><link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Mulish%3A400%2C400italic%2C700%2C700italic%7CNoto+Serif+SC%3A400%2C400italic%2C700%2C700italic&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mulish%3A400%2C400italic%2C700%2C700italic%7CNoto+Serif+SC%3A400%2C400italic%2C700%2C700italic&display=swap" media="print" onload="this.media&#x3D;&#39;all&#39;">
@@ -17,20 +17,17 @@
     
 <link rel="stylesheet" href="/css/loader.css">
 
-    <meta name="description" content="题目传送门 蒟蒻的第一篇博客  大致思路 记x右边添加了k个0,那么就有: $$y&#x3D;10^k*x  $$$$n&#x3D;x+y&#x3D;x*(10^k+1) $$又有$11≤n≤10^{18}$,于是可以枚举$10^k$,最多枚举18次 当n能被$10^k+1$整除时 答案就是  $n&#x2F;(10^k+1)$,最后排序一下输出即可  Code 1234567891011121">
-<meta property="og:type" content="article">
-<meta property="og:title" content="观察数据范围并根据数学公式进行枚举(CF2132B)">
-<meta property="og:url" content="http://example.com/2025/12/10/%E6%95%B0%E5%AD%A6/math1/index.html">
+    <meta name="description" content="蒟蒻">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Mio_qh">
+<meta property="og:url" content="http://example.com/tags/dp/index.html">
 <meta property="og:site_name" content="Mio_qh">
-<meta property="og:description" content="题目传送门 蒟蒻的第一篇博客  大致思路 记x右边添加了k个0,那么就有: $$y&#x3D;10^k*x  $$$$n&#x3D;x+y&#x3D;x*(10^k+1) $$又有$11≤n≤10^{18}$,于是可以枚举$10^k$,最多枚举18次 当n能被$10^k+1$整除时 答案就是  $n&#x2F;(10^k+1)$,最后排序一下输出即可  Code 1234567891011121">
+<meta property="og:description" content="蒟蒻">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2025-12-10T14:37:33.417Z">
-<meta property="article:modified_time" content="2025-12-11T07:21:49.905Z">
+<meta property="og:image" content="http://example.com/images/banner.webp">
 <meta property="article:author" content="Mio_qh">
-<meta property="article:tag" content="思维">
-<meta property="article:tag" content="数学">
-<meta property="article:tag" content="枚举">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/images/banner.webp">
     <link rel="alternate" href="/atom.xml" title="Mio_qh" type="application/atom+xml">
     <link rel="shortcut icon" href="/images/favicon.ico">
   
@@ -128,14 +125,16 @@
   </nav>
 </div>
 <header id="header" aria-label="Site header">
-    <picture></picture>
-    <img  fetchpriority="high" src="https://l-mio-qh.github.io/images/covers/cover5.jpg" alt="观察数据范围并根据数学公式进行枚举(CF2132B)">
+      <picture>
+      </picture>
+        <img  fetchpriority="high" src="/images/banner.webp" alt="">
   <div id="header-outer">
     <div id="header-title">
           <span id="logo">
-            <h1 data-aos="slide-up">观察数据范围并根据数学公式进行枚举(CF2132B)</h1>
+            <h1 data-aos="slide-up">标签</h1>
           </span>
         <h2 id="subtitle-wrap" data-aos="slide-down">
+            <span id="subtitle">dp</span>
         </h2>
     </div>
   </div>
@@ -143,15 +142,10 @@
 
         <div id="content" aria-label="Page content" class="sidebar-left"  >
           <aside id="sidebar" aria-label="Sidebar">
-  <div class="sidebar-wrapper-container sticky">
+  <div class="sidebar-wrapper-container ">
   <div class="sidebar-wrapper">
     <div class="sidebar-wrap" data-aos="fade-up">
-          <div class="sidebar-toc-sidebar"><h3 class="toc-title">文章目录</h3>
-<div class="sidebar-toc-wrapper toc-div-class" >
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE%E4%BC%A0%E9%80%81%E9%97%A8"><span class="toc-number">1.</span> <span class="toc-text"> 题目传送门</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%A7%E8%87%B4%E6%80%9D%E8%B7%AF"><span class="toc-number">1.1.</span> <span class="toc-text"> 大致思路</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#code"><span class="toc-number">1.2.</span> <span class="toc-text"> Code</span></a></li></ol></li></ol>
-</div>
-</div>
-          <div class="sidebar-common-sidebar hidden"><div class="sidebar-author">
+        <div class="sidebar-author">
   <img data-src="/avatar/avatar.webp" data-sizes="auto" alt="Mio_qh" class="lazyload">
   <div class="sidebar-author-name">Mio_qh</div>
   <div class="sidebar-description">蒟蒻</div>
@@ -208,68 +202,93 @@
         <div class="sidebar-menu-link">友链</div>
       </div>
 </div>
-</div>
-          <div class="sidebar-btn-wrapper" style="position:static">
-            <div class="sidebar-toc-btn current"></div>
-            <div class="sidebar-common-btn"></div>
-          </div>
+
     </div>
   </div>
   <div class="sidebar-widget">
+        <div class="widget-wrapper">
+    <div class="widget-wrap" data-aos="fade-up">
+      <h3 class="widget-title">分类</h3>
+      <div class="widget">
+        <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%AE%97%E6%B3%95%E9%A2%98/" title="算法题">算法题</a></li></ul>
+      </div>
+    </div>
+  </div>
+
+        <div class="widget-wrapper">
+    <div class="widget-wrap" data-aos="fade-up">
+      <h3 class="widget-title">标签</h3>
+      <div class="widget">
+        <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/dp/" rel="tag" title="dp">dp</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%80%9D%E7%BB%B4/" rel="tag" title="思维">思维</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%B0%E5%AD%A6/" rel="tag" title="数学">数学</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" rel="tag" title="数据结构">数据结构</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9D%BF%E9%A2%98/" rel="tag" title="板题">板题</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9E%9A%E4%B8%BE/" rel="tag" title="枚举">枚举</a></li></ul>
+      </div>
+    </div>
+  </div>
+
+        <div class="widget-wrapper">
+    <div class="widget-wrap" data-aos="fade-up">
+      <h3 class="widget-title">标签云</h3>
+      <div class="widget tagcloud">
+        <a href="/tags/dp/" style="font-size: 20px;">dp</a> <a href="/tags/%E6%80%9D%E7%BB%B4/" style="font-size: 20px;">思维</a> <a href="/tags/%E6%95%B0%E5%AD%A6/" style="font-size: 10px;">数学</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" style="font-size: 10px;">数据结构</a> <a href="/tags/%E6%9D%BF%E9%A2%98/" style="font-size: 10px;">板题</a> <a href="/tags/%E6%9E%9A%E4%B8%BE/" style="font-size: 10px;">枚举</a>
+      </div>
+    </div>
+  </div>
+
   </div>
   </div>
 </aside>
 
-          <section id="main" aria-label="Main content"><article id="post-数学/math1" class="h-entry article" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-inner" data-aos="fade-up">
-    <div class="article-meta">
-      <div class="article-date">
-  <span class="article-date-link icon-calendar" data-aos="zoom-in">
-    <time datetime="2025-12-10T14:37:33.417Z" itemprop="datePublished">2025-12-10</time>
-    <time style="display: none;" id="post-update-time">2025-12-11</time>
-  </span>
+          <section id="main" aria-label="Main content"><div class="archives-outer-wrap" data-aos="fade-up">
+    <div class="tag-wrap">
+    <div class="archives-tag-list-item" data-aos="zoom-in">
+      <a class="archives-tag-list-link" href="/tags/%E6%9D%BF%E9%A2%98/">板题</a>
+    </div>
+    <div class="archives-tag-list-item" data-aos="zoom-in">
+      <a class="archives-tag-list-link" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a>
+    </div>
+    <div class="archives-tag-list-item" data-aos="zoom-in">
+      <a class="archives-tag-list-link" href="/tags/dp/">dp</a>
+    </div>
+    <div class="archives-tag-list-item" data-aos="zoom-in">
+      <a class="archives-tag-list-link" href="/tags/%E6%80%9D%E7%BB%B4/">思维</a>
+    </div>
+    <div class="archives-tag-list-item" data-aos="zoom-in">
+      <a class="archives-tag-list-link" href="/tags/%E6%95%B0%E5%AD%A6/">数学</a>
+    </div>
+    <div class="archives-tag-list-item" data-aos="zoom-in">
+      <a class="archives-tag-list-link" href="/tags/%E6%9E%9A%E4%B8%BE/">枚举</a>
+    </div>
 </div>
-
-        <div class="article-category">
-    <a class="article-category-link" href="/categories/%E7%AE%97%E6%B3%95%E9%A2%98/" title="算法题">算法题</a>
-  </div>
-
+<div class="category-wrap">
+    <div class="archives-category-list-item" data-aos="zoom-in">
+      <a class="archives-category-list-link" href="/categories/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</a>
     </div>
-    
-    <div class="hr-line"></div>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-        <h1 id="题目传送门"><a class="markdownIt-Anchor" href="#题目传送门"></a> <a target="_blank" rel="noopener" href="https://codeforces.com/contest/2132/problem/B">题目传送门</a></h1>
-<p><s>蒟蒻的第一篇博客</s></p>
-<h2 id="大致思路"><a class="markdownIt-Anchor" href="#大致思路"></a> 大致思路</h2>
-<p>记x右边添加了k个0,那么就有:</p>
-<p>$$y&#x3D;10^k*x 
-$$</p><p>$$n&#x3D;x+y&#x3D;x*(10^k+1)
-$$</p><p>又有$11≤n≤10^{18}$,于是可以枚举$10^k$,最多枚举18次<br />
-当n能被$10^k+1$整除时<br />
-答案就是  $n&#x2F;(10^k+1)$,最后排序一下输出即可</p>
-<h2 id="code"><a class="markdownIt-Anchor" href="#code"></a> Code</h2>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;bits/stdc++.h&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">#define int long long</span><br><span class="line">#define lll __int128</span><br><span class="line">#define Mio_qh signed</span><br><span class="line">#define el &#x27;\n&#x27;</span><br><span class="line">#define pb push_back</span><br><span class="line">#define all(x) (x).begin(), (x).end()</span><br><span class="line">#define pq priority_queue</span><br><span class="line">const int MOD = 998244353;</span><br><span class="line">const int N = 100721;</span><br><span class="line"></span><br><span class="line">int fastpow(int base, int exp) &#123;</span><br><span class="line">    int result = 1;</span><br><span class="line">    while (exp &gt; 0) &#123;</span><br><span class="line">        if (exp &amp; 1) result = (base*result)%MOD;</span><br><span class="line">        exp &gt;&gt;= 1;</span><br><span class="line">        base = (base*base)%MOD;</span><br><span class="line">    &#125;</span><br><span class="line">    return result;</span><br><span class="line">&#125;</span><br><span class="line">int hx[8]=&#123;1,1,-1,-1,2,-2,2,-2&#125;;</span><br><span class="line">int hy[8]=&#123;2,-2,2,-2,1,1,-1,-1&#125;;</span><br><span class="line"></span><br><span class="line">void print(lll x) &#123;</span><br><span class="line">    if(x==0) cout&lt;&lt;0&lt;&lt;el;</span><br><span class="line">    else &#123;</span><br><span class="line">        string ans=&quot;&quot;;</span><br><span class="line">        while(x!=0) &#123;</span><br><span class="line">            int t=x%10;</span><br><span class="line">            ans=to_string(t)+ans;</span><br><span class="line">            x=x/10;</span><br><span class="line">        &#125;</span><br><span class="line">        cout&lt;&lt;ans&lt;&lt;el;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void solve() &#123;</span><br><span class="line">    int n;</span><br><span class="line">    cin&gt;&gt;n;</span><br><span class="line">    int power=1;</span><br><span class="line">    vector&lt;int&gt; ans;</span><br><span class="line">    while (true)&#123;</span><br><span class="line">        power*=10;</span><br><span class="line">        if (power+1&gt;n) break;</span><br><span class="line">        if (n%(power+1)==0) ans.pb(n/(power+1));</span><br><span class="line">    &#125;</span><br><span class="line">    if (ans.empty()) &#123;</span><br><span class="line">        cout&lt;&lt;0&lt;&lt;el;</span><br><span class="line">        return;</span><br><span class="line">    &#125;</span><br><span class="line">    sort(all(ans));</span><br><span class="line">    cout&lt;&lt;ans.size()&lt;&lt;el;</span><br><span class="line">    for (auto i:ans) cout&lt;&lt;i&lt;&lt;&quot; &quot;;</span><br><span class="line">    cout&lt;&lt;el;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Mio_qh main() &#123;</span><br><span class="line">    ios_base::sync_with_stdio(false);</span><br><span class="line">    cin.tie(0);</span><br><span class="line">    cout.tie(0);</span><br><span class="line">    int tt = 1;</span><br><span class="line">    cin &gt;&gt; tt;</span><br><span class="line">    while (tt--) solve();</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-    </div>
-    <footer class="article-footer">
-        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item" data-aos="zoom-in"><a class="article-tag-list-link" href="/tags/%E6%80%9D%E7%BB%B4/" rel="tag" title="思维">思维</a></li><li class="article-tag-list-item" data-aos="zoom-in"><a class="article-tag-list-link" href="/tags/%E6%95%B0%E5%AD%A6/" rel="tag" title="数学">数学</a></li><li class="article-tag-list-item" data-aos="zoom-in"><a class="article-tag-list-link" href="/tags/%E6%9E%9A%E4%B8%BE/" rel="tag" title="枚举">枚举</a></li></ul>
-
-    </footer>
+</div>
+        <section class="archives-wrap" data-aos="fade-up">
+          <div class="archive-year-wrap">
+            <a href="/archives/2025" class="archive-year">2025</a>
+          </div>
+          <ul>
+            <li class="archive-article">
+  <div class="archive-article-date">
+    <span>
+      <time class="dt-published" datetime="2025-12-11T09:33:38.285Z" itemprop="datePublished">12-11</time>
+    </span>
   </div>
-    <nav id="article-nav" aria-label="Article navigation" data-aos="fade-up">
-      <div class="article-nav-link-wrap left">
-          <img data-src="https://l-mio-qh.github.io/images/covers/cover3.jpg" data-sizes="auto" alt="并查集" class="lazyload">
-        <a href="/2025/12/11/%E6%9D%BF%E9%A2%98/%E5%B9%B6%E6%9F%A5%E9%9B%86/" aria-label="前一篇: 并查集" title="前一篇: 并查集"></a>
-        <div class="article-nav-caption">前一篇</div>
-        <h3 class="article-nav-title">
-            并查集
-        </h3>
-      </div>
-  </nav>
+    <a class="archive-article-title" href="/2025/12/11/dp/%E8%83%8C%E5%8C%85dp%E5%88%A4%E6%96%AD%E9%97%AE%E9%A2%98/">背包判断能否用n个数之和表示某个数</a>
+</li>
 
-</article>
+            <li class="archive-article">
+  <div class="archive-article-date">
+    <span>
+      <time class="dt-published" datetime="2025-12-11T08:38:08.220Z" itemprop="datePublished">12-11</time>
+    </span>
+  </div>
+    <a class="archive-article-title" href="/2025/12/11/dp/%E7%9F%A9%E9%98%B5%E5%8F%96%E6%95%B0%E6%B8%B8%E6%88%8F/">矩阵取数游戏</a>
+</li>
 
+          </ul>
+        </section>
+  </div>
 
 </section>
         </div>
@@ -313,12 +332,7 @@ $$</p><p>又有$11≤n≤10^{18}$,于是可以枚举$10^k$,最多枚举18次<br 
       </div>
       <nav id="mobile-nav" aria-label="Mobile navigation">
   <div class="sidebar-wrap">
-        <div class="sidebar-toc-sidebar"><h3 class="toc-title">文章目录</h3>
-<div class="sidebar-toc-wrapper toc-div-class" >
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE%E4%BC%A0%E9%80%81%E9%97%A8"><span class="toc-number">1.</span> <span class="toc-text"> 题目传送门</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%A7%E8%87%B4%E6%80%9D%E8%B7%AF"><span class="toc-number">1.1.</span> <span class="toc-text"> 大致思路</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#code"><span class="toc-number">1.2.</span> <span class="toc-text"> Code</span></a></li></ol></li></ol>
-</div>
-</div>
-        <div class="sidebar-common-sidebar hidden"><div class="sidebar-author">
+      <div class="sidebar-author">
   <img data-src="/avatar/avatar.webp" data-sizes="auto" alt="Mio_qh" class="lazyload">
   <div class="sidebar-author-name">Mio_qh</div>
   <div class="sidebar-description">蒟蒻</div>
@@ -375,12 +389,8 @@ $$</p><p>又有$11≤n≤10^{18}$,于是可以枚举$10^k$,最多枚举18次<br 
         <div class="sidebar-menu-link">友链</div>
       </div>
 </div>
-</div>
+
   </div>
-      <div class="sidebar-btn-wrapper">
-        <div class="sidebar-toc-btn current"></div>
-        <div class="sidebar-common-btn"></div>
-      </div>
 </nav>
 
     </div>
@@ -436,52 +446,6 @@ $$</p><p>又有$11≤n≤10^{18}$,于是可以枚举$10^k$,最多枚举18次<br 
 
 <div id="lazy-script">
   <div>
-      
-      
-      <script data-pjax>
-        window.REIMU_POST = {
-          author: "Mio_qh",
-          title: "观察数据范围并根据数学公式进行枚举(CF2132B)",
-          url: "http://example.com/2025/12/10/%E6%95%B0%E5%AD%A6/math1/",
-          excerpt: "",
-          description: "",
-          stripContent: " 题目传送门 蒟蒻的第一篇博客  大致思路 记x右边添加了k个0,那么就有: $$y&amp;#x3D;10^k*x  $$$$n&amp;#x3D;x+y&amp;#x3D;x*(10^k+1) $$又有$11≤n≤10^{18}$,于是可以枚举$10^k$,最多枚举18次 当n能被$10^k+1$整除时 答案就是  $n&amp;#x2F;(10^k+1)$,最后排序一下输出即可  Code 123456789101112131415161718192021222324252627282930313233343536373",
-          date: "Wed Dec 10 2025 22:37:33 GMT+0800",
-          updated: "Thu Dec 11 2025 15:21:49 GMT+0800",
-          cover: "https://l-mio-qh.github.io/images/covers/cover5.jpg",
-        };
-      </script>
-        
-<script src="/js/insert_highlight.js" data-pjax></script>
-
-        
-<script src="/js/tabs.js" data-pjax></script>
-
-      <script type="module" data-pjax>
-        const PhotoSwipeLightbox = (await safeImport("https://npm.webcache.cn/photoswipe@5.4.4/dist/photoswipe-lightbox.esm.min.js", "sha384-DiL6M/gG+wmTxmCRZyD1zee6lIhawn5TGvED0FOh7fXcN9B0aZ9dexSF/N6lrZi/")).default;
-        const initPswp = (gallery, children) => {
-          if (_$$(`${gallery} ${children}`).length > 0) {
-            new PhotoSwipeLightbox({
-              gallery,
-              children,
-              pswpModule: () => safeImport("https://npm.webcache.cn/photoswipe@5.4.4/dist/photoswipe.esm.min.js", "sha384-WkkO3GCmgkC3VQWpaV8DqhKJqpzpF9JoByxDmnV8+oTJ7m3DfYEWX1fu1scuS4+s")
-            }).init();
-          }
-        }
-        const pswp = () => {
-          initPswp('.article-entry', 'a.article-gallery-item');
-          initPswp('.article-gallery', 'a.article-gallery-item');
-          window.lightboxStatus = 'done';
-          window.removeEventListener('lightbox:ready', pswp);
-        }
-        if(window.lightboxStatus === 'ready') {
-          pswp()
-        } else {
-          window.addEventListener('lightbox:ready', pswp);
-        }
-      </script>
-        
-
   </div>
 </div>
 
