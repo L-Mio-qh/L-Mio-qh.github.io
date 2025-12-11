@@ -17,15 +17,15 @@
     
 <link rel="stylesheet" href="/css/loader.css">
 
-    <meta name="description" content="蒟蒻">
+    <meta name="description" content="题目传送门大致思路记x右边添加了k个0,那么就有:$$    y&#x3D;10^kx    \    n&#x3D;x+y&#x3D;x(10^k+1)$$又有$11≤n≤10^(18)$,于是可以枚举$10^k$,最多枚举18次当n能被$10^k+1$整除时答案就是  $n&#x2F;(10^k+1)$,最后排序一下输出即可     Code12345678910111213141516171">
 <meta property="og:type" content="article">
 <meta property="og:title" content="观察数据范围并根据数学公式进行枚举">
 <meta property="og:url" content="http://example.com/en/2025/12/10/math1/index.html">
 <meta property="og:site_name" content="Mio_qh">
-<meta property="og:description" content="蒟蒻">
+<meta property="og:description" content="题目传送门大致思路记x右边添加了k个0,那么就有:$$    y&#x3D;10^kx    \    n&#x3D;x+y&#x3D;x(10^k+1)$$又有$11≤n≤10^(18)$,于是可以枚举$10^k$,最多枚举18次当n能被$10^k+1$整除时答案就是  $n&#x2F;(10^k+1)$,最后排序一下输出即可     Code12345678910111213141516171">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2025-12-10T14:37:33.417Z">
-<meta property="article:modified_time" content="2025-12-11T03:00:12.690Z">
+<meta property="article:modified_time" content="2025-12-11T03:54:22.678Z">
 <meta property="article:author" content="Mio_qh">
 <meta property="article:tag" content="数学">
 <meta property="article:tag" content="枚举">
@@ -198,7 +198,7 @@
     <div class="sidebar-wrap" data-aos="fade-up">
           <div class="sidebar-toc-sidebar"><h3 class="toc-title">Contents</h3>
 <div class="sidebar-toc-wrapper toc-div-class" >
-    
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE%E4%BC%A0%E9%80%81%E9%97%A8"><span class="toc-number">1.</span> <span class="toc-text">题目传送门</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%A7%E8%87%B4%E6%80%9D%E8%B7%AF"><span class="toc-number">1.1.</span> <span class="toc-text">大致思路</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Code"><span class="toc-number">1.2.</span> <span class="toc-text">Code</span></a></li></ol></li></ol>
 </div>
 </div>
           <div class="sidebar-common-sidebar hidden"><div class="sidebar-author">
@@ -289,7 +289,9 @@
     <div class="hr-line"></div>
     
     <div class="e-content article-entry" itemprop="articleBody">
-        
+        <h1 id="题目传送门"><a href="#题目传送门" class="headerlink" title="题目传送门"></a><a target="_blank" rel="noopener" href="https://codeforces.com/contest/2132/problemB">题目传送门</a></h1><h2 id="大致思路"><a href="#大致思路" class="headerlink" title="大致思路"></a>大致思路</h2><p>记x右边添加了k个0,那么就有:<br>$$<br>    y&#x3D;10^k<em>x    \<br>    n&#x3D;x+y&#x3D;x</em>(10^k+1)<br>$$<br>又有$11≤n≤10^(18)$,于是可以枚举$10^k$,最多枚举18次<br>当n能被$10^k+1$整除时<br>答案就是  $n&#x2F;(10^k+1)$,最后排序一下输出即可    </p>
+<h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;bits/stdc++.h&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">#define int long long</span><br><span class="line">#define lll __int128</span><br><span class="line">#define Mio_qh signed</span><br><span class="line">#define el &#x27;\n&#x27;</span><br><span class="line">#define pb push_back</span><br><span class="line">#define all(x) (x).begin(), (x).end()</span><br><span class="line">#define pq priority_queue</span><br><span class="line">const int MOD = 998244353;</span><br><span class="line">const int N = 100721;</span><br><span class="line"></span><br><span class="line">int fastpow(int base, int exp) &#123;</span><br><span class="line">    int result = 1;</span><br><span class="line">    while (exp &gt; 0) &#123;</span><br><span class="line">        if (exp &amp; 1) result = (base*result)%MOD;</span><br><span class="line">        exp &gt;&gt;= 1;</span><br><span class="line">        base = (base*base)%MOD;</span><br><span class="line">    &#125;</span><br><span class="line">    return result;</span><br><span class="line">&#125;</span><br><span class="line">int hx[8]=&#123;1,1,-1,-1,2,-2,2,-2&#125;;</span><br><span class="line">int hy[8]=&#123;2,-2,2,-2,1,1,-1,-1&#125;;</span><br><span class="line"></span><br><span class="line">void print(lll x) &#123;</span><br><span class="line">    if(x==0) cout&lt;&lt;0&lt;&lt;el;</span><br><span class="line">    else &#123;</span><br><span class="line">        string ans=&quot;&quot;;</span><br><span class="line">        while(x!=0) &#123;</span><br><span class="line">            int t=x%10;</span><br><span class="line">            ans=to_string(t)+ans;</span><br><span class="line">            x=x/10;</span><br><span class="line">        &#125;</span><br><span class="line">        cout&lt;&lt;ans&lt;&lt;el;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void solve() &#123;</span><br><span class="line">    int n;</span><br><span class="line">    cin&gt;&gt;n;</span><br><span class="line">    int power=1;</span><br><span class="line">    vector&lt;int&gt; ans;</span><br><span class="line">    while (true)&#123;</span><br><span class="line">        power*=10;</span><br><span class="line">        if (power+1&gt;n) break;</span><br><span class="line">        if (n%(power+1)==0) ans.pb(n/(power+1));</span><br><span class="line">    &#125;</span><br><span class="line">    if (ans.empty()) &#123;</span><br><span class="line">        cout&lt;&lt;0&lt;&lt;el;</span><br><span class="line">        return;</span><br><span class="line">    &#125;</span><br><span class="line">    sort(all(ans));</span><br><span class="line">    cout&lt;&lt;ans.size()&lt;&lt;el;</span><br><span class="line">    for (auto i:ans) cout&lt;&lt;i&lt;&lt;&quot; &quot;;</span><br><span class="line">    cout&lt;&lt;el;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Mio_qh main() &#123;</span><br><span class="line">    ios_base::sync_with_stdio(false);</span><br><span class="line">    cin.tie(0);</span><br><span class="line">    cout.tie(0);</span><br><span class="line">    int tt = 1;</span><br><span class="line">    cin &gt;&gt; tt;</span><br><span class="line">    while (tt--) solve();</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
     </div>
     <footer class="article-footer">
         <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item" data-aos="zoom-in"><a class="article-tag-list-link" href="/en/tags/%E6%80%9D%E7%BB%B4/" rel="tag" title="思维">思维</a></li><li class="article-tag-list-item" data-aos="zoom-in"><a class="article-tag-list-link" href="/en/tags/%E6%95%B0%E5%AD%A6/" rel="tag" title="数学">数学</a></li><li class="article-tag-list-item" data-aos="zoom-in"><a class="article-tag-list-link" href="/en/tags/%E6%9E%9A%E4%B8%BE/" rel="tag" title="枚举">枚举</a></li></ul>
@@ -329,10 +331,10 @@
       </div>
       <div>
         <span class="icon-brush"></span>
-        75
+        415
         &nbsp;|&nbsp;
         <span class="icon-coffee"></span>
-        00:02
+        00:03
       </div>
       <div>
         <span class="icon-eye"></span>
@@ -354,7 +356,7 @@
   <div class="sidebar-wrap">
         <div class="sidebar-toc-sidebar"><h3 class="toc-title">Contents</h3>
 <div class="sidebar-toc-wrapper toc-div-class" >
-    
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE%E4%BC%A0%E9%80%81%E9%97%A8"><span class="toc-number">1.</span> <span class="toc-text">题目传送门</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%A7%E8%87%B4%E6%80%9D%E8%B7%AF"><span class="toc-number">1.1.</span> <span class="toc-text">大致思路</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Code"><span class="toc-number">1.2.</span> <span class="toc-text">Code</span></a></li></ol></li></ol>
 </div>
 </div>
         <div class="sidebar-common-sidebar hidden"><div class="sidebar-author">
@@ -484,9 +486,9 @@
           url: "http://example.com/2025/12/10/math1/",
           excerpt: "",
           description: "",
-          stripContent: "",
+          stripContent: "题目传送门大致思路记x右边添加了k个0,那么就有:$$    y&amp;#x3D;10^kx    \    n&amp;#x3D;x+y&amp;#x3D;x(10^k+1)$$又有$11≤n≤10^(18)$,于是可以枚举$10^k$,最多枚举18次当n能被$10^k+1$整除时答案就是  $n&amp;#x2F;(10^k+1)$,最后排序一下输出即可     Code1234567891011121314151617181920212223242526272829303132333435363738394041424",
           date: "Wed Dec 10 2025 22:37:33 GMT+0800",
-          updated: "Thu Dec 11 2025 11:00:12 GMT+0800",
+          updated: "Thu Dec 11 2025 11:54:22 GMT+0800",
           cover: "/images/banner.webp",
         };
       </script>
