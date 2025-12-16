@@ -9,7 +9,7 @@
   
   <script>window.REIMU_CONFIG = {};window.REIMU_CONFIG.icon_font = '4552607_4k4bc36ef96';window.REIMU_CONFIG.clipboard_tips = {"success":{"zh-CN":"复制成功 (*^▽^*)"},"fail":{"zh-CN":"复制失败 (ﾟ⊿ﾟ)ﾂ"},"copyright":{"enable":false,"count":50,"license_type":"by-nc-sa"}};window.REIMU_CONFIG.clipboard_tips.copyright.content = '本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！';window.REIMU_CONFIG.code_block = {"expand":true};window.REIMU_CONFIG.base = 'http://example.com';</script>
   <title>
-    关于 | Mio_qh
+    基于步数dp | Mio_qh
   </title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin><link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Mulish%3A400%2C400italic%2C700%2C700italic%7CNoto+Serif+SC%3A400%2C400italic%2C700%2C700italic&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mulish%3A400%2C400italic%2C700%2C700italic%7CNoto+Serif+SC%3A400%2C400italic%2C700%2C700italic&display=swap" media="print" onload="this.media&#x3D;&#39;all&#39;">
@@ -17,19 +17,20 @@
     
 <link rel="stylesheet" href="/css/loader.css">
 
-    <meta name="description" content="关于">
-<meta property="og:type" content="website">
-<meta property="og:title" content="关于">
-<meta property="og:url" content="http://example.com/about/index.html">
+    <meta name="description" content="题目传送门  大致思路 可以发现&quot;gcd&quot;只有六种排列,一旦确定某种排列之后,每一步要走到的字母就确定了 记dp[i][j]为到(i,j)格有几种路径 $$dp[i][j]&#x3D;dp[i][j-1]+dp[i-1][j] $$做六次dp,累加即可  Code 12345678910111213141516171819202122232425262728293031voi">
+<meta property="og:type" content="article">
+<meta property="og:title" content="基于步数dp">
+<meta property="og:url" content="http://example.com/2025/12/16/%E6%95%99%E8%82%B2%E6%80%A7%E9%A2%98%E7%9B%AE/%E5%9F%BA%E4%BA%8E%E6%AD%A5%E6%95%B0dp/index.html">
 <meta property="og:site_name" content="Mio_qh">
-<meta property="og:description" content="关于">
+<meta property="og:description" content="题目传送门  大致思路 可以发现&quot;gcd&quot;只有六种排列,一旦确定某种排列之后,每一步要走到的字母就确定了 记dp[i][j]为到(i,j)格有几种路径 $$dp[i][j]&#x3D;dp[i][j-1]+dp[i-1][j] $$做六次dp,累加即可  Code 12345678910111213141516171819202122232425262728293031voi">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/images/banner.webp">
-<meta property="article:published_time" content="2021-09-22T13:01:47.000Z">
-<meta property="article:modified_time" content="2025-12-10T05:32:00.538Z">
+<meta property="article:published_time" content="2025-12-16T06:40:19.145Z">
+<meta property="article:modified_time" content="2025-12-16T06:48:04.473Z">
 <meta property="article:author" content="Mio_qh">
+<meta property="article:tag" content="dp">
+<meta property="article:tag" content="思维">
+<meta property="article:tag" content="教育性">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/images/banner.webp">
     <link rel="alternate" href="/atom.xml" title="Mio_qh" type="application/atom+xml">
     <link rel="shortcut icon" href="/images/favicon.ico">
   
@@ -130,13 +131,12 @@
   </nav>
 </div>
 <header id="header" aria-label="Site header">
-      <picture>
-      </picture>
-        <img  fetchpriority="high" src="/images/banner.webp" alt="关于">
+    <picture></picture>
+    <img  fetchpriority="high" src="https://l-mio-qh.github.io/images/covers/cover4.jpg" alt="基于步数dp">
   <div id="header-outer">
     <div id="header-title">
           <span id="logo">
-            <h1 data-aos="slide-up">关于</h1>
+            <h1 data-aos="slide-up">基于步数dp</h1>
           </span>
         <h2 id="subtitle-wrap" data-aos="slide-down">
         </h2>
@@ -146,10 +146,15 @@
 
         <div id="content" aria-label="Page content" class="sidebar-left"  >
           <aside id="sidebar" aria-label="Sidebar">
-  <div class="sidebar-wrapper-container ">
+  <div class="sidebar-wrapper-container sticky">
   <div class="sidebar-wrapper">
     <div class="sidebar-wrap" data-aos="fade-up">
-        <div class="sidebar-author">
+          <div class="sidebar-toc-sidebar"><h3 class="toc-title">文章目录</h3>
+<div class="sidebar-toc-wrapper toc-div-class" >
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE%E4%BC%A0%E9%80%81%E9%97%A8"><span class="toc-number">1.</span> <span class="toc-text"> 题目传送门</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%A7%E8%87%B4%E6%80%9D%E8%B7%AF"><span class="toc-number">1.1.</span> <span class="toc-text"> 大致思路</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#code"><span class="toc-number">1.2.</span> <span class="toc-text"> Code</span></a></li></ol></li></ol>
+</div>
+</div>
+          <div class="sidebar-common-sidebar hidden"><div class="sidebar-author">
   <img data-src="/avatar/avatar.webp" data-sizes="auto" alt="Mio_qh" class="lazyload">
   <div class="sidebar-author-name">Mio_qh</div>
   <div class="sidebar-description">蒟蒻</div>
@@ -206,73 +211,79 @@
         <div class="sidebar-menu-link">友链</div>
       </div>
 </div>
-
+</div>
+          <div class="sidebar-btn-wrapper" style="position:static">
+            <div class="sidebar-toc-btn current"></div>
+            <div class="sidebar-common-btn"></div>
+          </div>
     </div>
   </div>
   <div class="sidebar-widget">
-        <div class="widget-wrapper">
-    <div class="widget-wrap" data-aos="fade-up">
-      <h3 class="widget-title">分类</h3>
-      <div class="widget">
-        <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%AF%94%E8%B5%9B%E8%AE%B0%E5%BD%95/" title="比赛记录">比赛记录</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%AE%97%E6%B3%95%E9%A2%98/" title="算法题">算法题</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%A1%A5%E9%A2%98/" title="补题">补题</a></li></ul>
-      </div>
-    </div>
-  </div>
-
-        <div class="widget-wrapper">
-    <div class="widget-wrap" data-aos="fade-up">
-      <h3 class="widget-title">标签</h3>
-      <div class="widget">
-        <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/dp/" rel="tag" title="dp">dp</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BA%8C%E5%88%86/" rel="tag" title="二分">二分</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%9B%BE%E8%AE%BA/" rel="tag" title="图论">图论</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%80%9D%E7%BB%B4/" rel="tag" title="思维">思维</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%90%9C%E7%B4%A2/" rel="tag" title="搜索">搜索</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%99%E8%82%B2%E6%80%A7/" rel="tag" title="教育性">教育性</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%B0%E5%AD%A6/" rel="tag" title="数学">数学</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" rel="tag" title="数据结构">数据结构</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9D%BF%E9%A2%98/" rel="tag" title="板题">板题</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9E%9A%E4%B8%BE/" rel="tag" title="枚举">枚举</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%A8%A1%E6%8B%9F/" rel="tag" title="模拟">模拟</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%A2%84%E5%A4%84%E7%90%86/" rel="tag" title="预处理">预处理</a></li></ul>
-      </div>
-    </div>
-  </div>
-
-        <div class="widget-wrapper">
-    <div class="widget-wrap" data-aos="fade-up">
-      <h3 class="widget-title">标签云</h3>
-      <div class="widget tagcloud">
-        <a href="/tags/dp/" style="font-size: 18px;">dp</a> <a href="/tags/%E4%BA%8C%E5%88%86/" style="font-size: 10px;">二分</a> <a href="/tags/%E5%9B%BE%E8%AE%BA/" style="font-size: 10px;">图论</a> <a href="/tags/%E6%80%9D%E7%BB%B4/" style="font-size: 20px;">思维</a> <a href="/tags/%E6%90%9C%E7%B4%A2/" style="font-size: 12px;">搜索</a> <a href="/tags/%E6%95%99%E8%82%B2%E6%80%A7/" style="font-size: 14px;">教育性</a> <a href="/tags/%E6%95%B0%E5%AD%A6/" style="font-size: 14px;">数学</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" style="font-size: 16px;">数据结构</a> <a href="/tags/%E6%9D%BF%E9%A2%98/" style="font-size: 12px;">板题</a> <a href="/tags/%E6%9E%9A%E4%B8%BE/" style="font-size: 16px;">枚举</a> <a href="/tags/%E6%A8%A1%E6%8B%9F/" style="font-size: 10px;">模拟</a> <a href="/tags/%E9%A2%84%E5%A4%84%E7%90%86/" style="font-size: 14px;">预处理</a>
-      </div>
-    </div>
-  </div>
-
   </div>
   </div>
 </aside>
 
-          <section id="main" aria-label="Main content"><article id="page-" class="h-entry article" itemscope itemtype="https://schema.org/BlogPosting">
+          <section id="main" aria-label="Main content"><article id="post-教育性题目/基于步数dp" class="h-entry article" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-inner" data-aos="fade-up">
     <div class="article-meta">
       <div class="article-date">
   <span class="article-date-link icon-calendar" data-aos="zoom-in">
-    <time datetime="2021-09-22T13:01:47.000Z" itemprop="datePublished">2021-09-22</time>
-    <time style="display: none;" id="post-update-time">2025-12-10</time>
+    <time datetime="2025-12-16T06:40:19.145Z" itemprop="datePublished">2025-12-16</time>
+    <time style="display: none;" id="post-update-time">2025-12-16</time>
   </span>
 </div>
 
-      
+        <div class="article-category">
+    <a class="article-category-link" href="/categories/%E7%AE%97%E6%B3%95%E9%A2%98/" title="算法题">算法题</a>
+  </div>
+
     </div>
     
     <div class="hr-line"></div>
     
     <div class="e-content article-entry" itemprop="articleBody">
-        <h2 id="关于"><a class="markdownIt-Anchor" href="#关于"></a> 关于</h2>
+        <h1 id="题目传送门"><a class="markdownIt-Anchor" href="#题目传送门"></a> <a target="_blank" rel="noopener" href="https://ac.nowcoder.com/acm/contest/123787/E">题目传送门</a></h1>
+<h2 id="大致思路"><a class="markdownIt-Anchor" href="#大致思路"></a> 大致思路</h2>
+<p>可以发现&quot;gcd&quot;只有六种排列,一旦确定某种排列之后,每一步要走到的字母就确定了<br />
+记dp[i][j]为到(i,j)格有几种路径</p>
+<p>$$dp[i][j]&#x3D;dp[i][j-1]+dp[i-1][j]
+$$</p><p>做六次dp,累加即可</p>
+<h2 id="code"><a class="markdownIt-Anchor" href="#code"></a> Code</h2>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">void solve() &#123;</span><br><span class="line">    int n,ans=0;</span><br><span class="line">    cin &gt;&gt; n;</span><br><span class="line">    int k=(2*n-1)/3;</span><br><span class="line">    vector&lt;string &gt; a(n);</span><br><span class="line">    for(int i=0;i&lt;n;i++) cin &gt;&gt;a[i];</span><br><span class="line">    string bzd[]=&#123;&quot;gcd&quot;,&quot;gdc&quot;,&quot;dgc&quot;,&quot;dcg&quot;,&quot;cdg&quot;,&quot;cgd&quot;&#125;;</span><br><span class="line">    for(auto zyy : bzd)&#123;</span><br><span class="line">        char c1=zyy[0],c2=zyy[1],c3=zyy[2];</span><br><span class="line">        if(a[0][0]!=c1 || a[n-1][n-1]!=c3) continue;</span><br><span class="line">        vector &lt;vector&lt;int&gt;&gt; dp(n,vector&lt;int&gt;(n,0));</span><br><span class="line">        dp[0][0]=1;</span><br><span class="line">        for(int w=1;w&lt;2*n-1;w++)&#123;</span><br><span class="line">            for(int i=0;i&lt;n;i++)&#123;</span><br><span class="line">                int j=w-i;</span><br><span class="line">                if(j&lt;0 || j&gt;=n) continue;</span><br><span class="line">                char need;//这一步应该走到哪一个字母</span><br><span class="line">                if(w&lt;k) need=c1;</span><br><span class="line">                else if(w&lt;2 * k &amp;&amp; w&gt;=k) need=c2;</span><br><span class="line">                else need=c3;</span><br><span class="line">                if(a[i][j]!=need) continue;</span><br><span class="line">                int temp=0;</span><br><span class="line">                if(i&gt;0) temp = (temp+dp[i-1][j]) % MOD;</span><br><span class="line">                if(j&gt;0) temp = (temp + dp[i][j-1] ) %MOD;</span><br><span class="line">                dp[i][j]=temp;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        ans=(ans+dp[n-1][n-1])%MOD;</span><br><span class="line">    &#125;</span><br><span class="line">    cout &lt;&lt; ans &lt;&lt; el;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
     </div>
     <footer class="article-footer">
-        <a data-aos="zoom-in" href="/about/index.html#comments" class="article-comment-link">
-          <span class="post-comments-count waline-comment-count" data-path="/about/index.html" itemprop="commentCount"></span>
+        <a data-aos="zoom-in" href="/2025/12/16/%E6%95%99%E8%82%B2%E6%80%A7%E9%A2%98%E7%9B%AE/%E5%9F%BA%E4%BA%8E%E6%AD%A5%E6%95%B0dp/#comments" class="article-comment-link">
+          <span class="post-comments-count waline-comment-count" data-path="/2025/12/16/%E6%95%99%E8%82%B2%E6%80%A7%E9%A2%98%E7%9B%AE/%E5%9F%BA%E4%BA%8E%E6%AD%A5%E6%95%B0dp/" itemprop="commentCount"></span>
           留言
         </a>
         <span data-aos="zoom-in" class="article-visitor-link">
-          <span class="waline-pageview-count" data-path="/about/">0</span>
+          <span class="waline-pageview-count" data-path="/2025/12/16/%E6%95%99%E8%82%B2%E6%80%A7%E9%A2%98%E7%9B%AE/%E5%9F%BA%E4%BA%8E%E6%AD%A5%E6%95%B0dp/">0</span>
           <em class="post-meta-item-text">阅读量</em>
         </span>
-      
+        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item" data-aos="zoom-in"><a class="article-tag-list-link" href="/tags/dp/" rel="tag" title="dp">dp</a></li><li class="article-tag-list-item" data-aos="zoom-in"><a class="article-tag-list-link" href="/tags/%E6%80%9D%E7%BB%B4/" rel="tag" title="思维">思维</a></li><li class="article-tag-list-item" data-aos="zoom-in"><a class="article-tag-list-link" href="/tags/%E6%95%99%E8%82%B2%E6%80%A7/" rel="tag" title="教育性">教育性</a></li></ul>
+
     </footer>
   </div>
-  
+    <nav id="article-nav" aria-label="Article navigation" data-aos="fade-up">
+      <div class="article-nav-link-wrap left">
+          <img data-src="https://l-mio-qh.github.io/images/covers/cover11.jpg" data-sizes="auto" alt="根据关系式推出判断条件" class="lazyload">
+        <a href="/2025/12/16/%E6%95%B0%E5%AD%A6/math2/" aria-label="前一篇: 根据关系式推出判断条件" title="前一篇: 根据关系式推出判断条件"></a>
+        <div class="article-nav-caption">前一篇</div>
+        <h3 class="article-nav-title">
+            根据关系式推出判断条件
+        </h3>
+      </div>
+    <div class="article-nav-link-wrap right">
+        <img data-src="https://l-mio-qh.github.io/images/covers/cover8.jpg" data-sizes="auto" alt="二分快速查找修改区间,并配合差分修改" class="lazyload">
+      <a href="/2025/12/16/%E4%BA%8C%E5%88%86/%E4%BA%8C%E5%88%86+%E6%8E%92%E5%BA%8F+%E5%B7%AE%E5%88%86+%E7%BB%93%E6%9E%84%E4%BD%93%E4%BF%9D%E5%AD%98%E7%B4%A2%E5%BC%95/" aria-label="后一篇: 二分快速查找修改区间,并配合差分修改"  title="后一篇: 二分快速查找修改区间,并配合差分修改"></a>
+      <div class="article-nav-caption">后一篇</div>
+      <h3 class="article-nav-title">
+          二分快速查找修改区间,并配合差分修改
+      </h3>
+    </div>
+  </nav>
+
 </article>
 
   <section id="comments" data-aos="fade-up">
@@ -336,7 +347,12 @@
       </div>
       <nav id="mobile-nav" aria-label="Mobile navigation">
   <div class="sidebar-wrap">
-      <div class="sidebar-author">
+        <div class="sidebar-toc-sidebar"><h3 class="toc-title">文章目录</h3>
+<div class="sidebar-toc-wrapper toc-div-class" >
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE%E4%BC%A0%E9%80%81%E9%97%A8"><span class="toc-number">1.</span> <span class="toc-text"> 题目传送门</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%A7%E8%87%B4%E6%80%9D%E8%B7%AF"><span class="toc-number">1.1.</span> <span class="toc-text"> 大致思路</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#code"><span class="toc-number">1.2.</span> <span class="toc-text"> Code</span></a></li></ol></li></ol>
+</div>
+</div>
+        <div class="sidebar-common-sidebar hidden"><div class="sidebar-author">
   <img data-src="/avatar/avatar.webp" data-sizes="auto" alt="Mio_qh" class="lazyload">
   <div class="sidebar-author-name">Mio_qh</div>
   <div class="sidebar-description">蒟蒻</div>
@@ -393,8 +409,12 @@
         <div class="sidebar-menu-link">友链</div>
       </div>
 </div>
-
+</div>
   </div>
+      <div class="sidebar-btn-wrapper">
+        <div class="sidebar-toc-btn current"></div>
+        <div class="sidebar-common-btn"></div>
+      </div>
 </nav>
 
     </div>
@@ -455,14 +475,14 @@
       <script data-pjax>
         window.REIMU_POST = {
           author: "Mio_qh",
-          title: "关于",
-          url: "http://example.com/about/index.html",
+          title: "基于步数dp",
+          url: "http://example.com/2025/12/16/%E6%95%99%E8%82%B2%E6%80%A7%E9%A2%98%E7%9B%AE/%E5%9F%BA%E4%BA%8E%E6%AD%A5%E6%95%B0dp/",
           excerpt: "",
           description: "",
-          stripContent: " 关于 ",
-          date: "Wed Sep 22 2021 21:01:47 GMT+0800",
-          updated: "Wed Dec 10 2025 13:32:00 GMT+0800",
-          cover: "/images/banner.webp",
+          stripContent: " 题目传送门  大致思路 可以发现&amp;quot;gcd&amp;quot;只有六种排列,一旦确定某种排列之后,每一步要走到的字母就确定了 记dp[i][j]为到(i,j)格有几种路径 $$dp[i][j]&amp;#x3D;dp[i][j-1]+dp[i-1][j] $$做六次dp,累加即可  Code 12345678910111213141516171819202122232425262728293031void solve() &amp;#123;    int n,ans=0;    cin &amp;gt;&amp;gt; n",
+          date: "Tue Dec 16 2025 14:40:19 GMT+0800",
+          updated: "Tue Dec 16 2025 14:48:04 GMT+0800",
+          cover: "https://l-mio-qh.github.io/images/covers/cover4.jpg",
         };
       </script>
         
