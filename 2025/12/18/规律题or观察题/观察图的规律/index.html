@@ -9,7 +9,7 @@
   
   <script>window.REIMU_CONFIG = {};window.REIMU_CONFIG.icon_font = '4552607_4k4bc36ef96';window.REIMU_CONFIG.clipboard_tips = {"success":{"zh-CN":"复制成功 (*^▽^*)"},"fail":{"zh-CN":"复制失败 (ﾟ⊿ﾟ)ﾂ"},"copyright":{"enable":false,"count":50,"license_type":"by-nc-sa"}};window.REIMU_CONFIG.clipboard_tips.copyright.content = '本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！';window.REIMU_CONFIG.code_block = {"expand":true};window.REIMU_CONFIG.base = 'http://example.com';</script>
   <title>
-    找合法三角形 | Mio_qh
+    打表观察,找规律(CF2070A) | Mio_qh
   </title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin><link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Mulish%3A400%2C400italic%2C700%2C700italic%7CNoto+Serif+SC%3A400%2C400italic%2C700%2C700italic&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mulish%3A400%2C400italic%2C700%2C700italic%7CNoto+Serif+SC%3A400%2C400italic%2C700%2C700italic&display=swap" media="print" onload="this.media&#x3D;&#39;all&#39;">
@@ -17,18 +17,18 @@
     
 <link rel="stylesheet" href="/css/loader.css">
 
-    <meta name="description" content="题目传送门  大致思路 将数组升序排序,对每一个长度分别计算能构成的不同三角形: 等腰,等边另外算 三边都不相同的三角形:利用&quot;三指针&quot;,说是三指针,其实感觉是双指针,两个指针在当前长度之前滑动,当前指针在计算时是不动的  Code 1234567891011121314151617181920212223void solve()&#123;    int n;    cin">
+    <meta name="description" content="题目传送门  大致思路 根据示例和 $x!&#x3D;1$ 且 $y!&#x3D;1$ 观察发现,中心顶点的入度唯一当且仅当 $x!&#x3D;y+1$ 这时候直接根据入度计算答案即可 中心顶点入度和除叶子节点入度相等的时,有 $x&#x3D;y+1$  Code 1234567891011121314151617181920212223242526272829303132333435void">
 <meta property="og:type" content="article">
-<meta property="og:title" content="找合法三角形">
-<meta property="og:url" content="http://example.com/2025/12/16/%E5%8F%8C%E6%8C%87%E9%92%88%E6%88%96%E5%A4%9A%E6%8C%87%E9%92%88/%E6%89%BE%E5%90%88%E6%B3%95%E4%B8%89%E8%A7%92%E5%BD%A2/index.html">
+<meta property="og:title" content="打表观察,找规律(CF2070A)">
+<meta property="og:url" content="http://example.com/2025/12/18/%E8%A7%84%E5%BE%8B%E9%A2%98or%E8%A7%82%E5%AF%9F%E9%A2%98/%E8%A7%82%E5%AF%9F%E5%9B%BE%E7%9A%84%E8%A7%84%E5%BE%8B/index.html">
 <meta property="og:site_name" content="Mio_qh">
-<meta property="og:description" content="题目传送门  大致思路 将数组升序排序,对每一个长度分别计算能构成的不同三角形: 等腰,等边另外算 三边都不相同的三角形:利用&quot;三指针&quot;,说是三指针,其实感觉是双指针,两个指针在当前长度之前滑动,当前指针在计算时是不动的  Code 1234567891011121314151617181920212223void solve()&#123;    int n;    cin">
+<meta property="og:description" content="题目传送门  大致思路 根据示例和 $x!&#x3D;1$ 且 $y!&#x3D;1$ 观察发现,中心顶点的入度唯一当且仅当 $x!&#x3D;y+1$ 这时候直接根据入度计算答案即可 中心顶点入度和除叶子节点入度相等的时,有 $x&#x3D;y+1$  Code 1234567891011121314151617181920212223242526272829303132333435void">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2025-12-16T07:26:19.384Z">
-<meta property="article:modified_time" content="2025-12-16T11:56:53.965Z">
+<meta property="article:published_time" content="2025-12-18T11:52:18.377Z">
+<meta property="article:modified_time" content="2025-12-18T12:02:37.657Z">
 <meta property="article:author" content="Mio_qh">
-<meta property="article:tag" content="数学">
-<meta property="article:tag" content="双指针或多指针">
+<meta property="article:tag" content="图论">
+<meta property="article:tag" content="规律or观察">
 <meta name="twitter:card" content="summary">
     <link rel="alternate" href="/atom.xml" title="Mio_qh" type="application/atom+xml">
     <link rel="shortcut icon" href="/images/favicon.ico">
@@ -131,11 +131,11 @@
 </div>
 <header id="header" aria-label="Site header">
     <picture></picture>
-    <img  fetchpriority="high" src="https://l-mio-qh.github.io/images/covers/cover13.jpg" alt="找合法三角形">
+    <img  fetchpriority="high" src="https://l-mio-qh.github.io/images/covers/cover19.jpg" alt="打表观察,找规律(CF2070A)">
   <div id="header-outer">
     <div id="header-title">
           <span id="logo">
-            <h1 data-aos="slide-up">找合法三角形</h1>
+            <h1 data-aos="slide-up">打表观察,找规律(CF2070A)</h1>
           </span>
         <h2 id="subtitle-wrap" data-aos="slide-down">
         </h2>
@@ -222,13 +222,13 @@
   </div>
 </aside>
 
-          <section id="main" aria-label="Main content"><article id="post-双指针或多指针/找合法三角形" class="h-entry article" itemscope itemtype="https://schema.org/BlogPosting">
+          <section id="main" aria-label="Main content"><article id="post-规律题or观察题/观察图的规律" class="h-entry article" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-inner" data-aos="fade-up">
     <div class="article-meta">
       <div class="article-date">
   <span class="article-date-link icon-calendar" data-aos="zoom-in">
-    <time datetime="2025-12-16T07:26:19.384Z" itemprop="datePublished">2025-12-16</time>
-    <time style="display: none;" id="post-update-time">2025-12-16</time>
+    <time datetime="2025-12-18T11:52:18.377Z" itemprop="datePublished">2025-12-18</time>
+    <time style="display: none;" id="post-update-time">2025-12-18</time>
   </span>
 </div>
 
@@ -241,42 +241,35 @@
     <div class="hr-line"></div>
     
     <div class="e-content article-entry" itemprop="articleBody">
-        <h1 id="题目传送门"><a class="markdownIt-Anchor" href="#题目传送门"></a> <a target="_blank" rel="noopener" href="https://ac.nowcoder.com/acm/contest/122724/E">题目传送门</a></h1>
+        <h1 id="题目传送门"><a class="markdownIt-Anchor" href="#题目传送门"></a> <a target="_blank" rel="noopener" href="https://codeforces.com/contest/1829/problem/F">题目传送门</a></h1>
 <h2 id="大致思路"><a class="markdownIt-Anchor" href="#大致思路"></a> 大致思路</h2>
-<p>将数组升序排序,对每一个长度分别计算能构成的不同三角形:<br />
-等腰,等边另外算<br />
-三边都不相同的三角形:利用&quot;三指针&quot;,说是三指针,其实感觉是双指针,两个指针在当前长度之前滑动,当前指针在计算时是不动的</p>
+<p>根据示例和 $x!&#x3D;1$ 且 $y!&#x3D;1$<br />
+观察发现,中心顶点的入度唯一当且仅当 $x!&#x3D;y+1$<br />
+这时候直接根据入度计算答案即可<br />
+中心顶点入度和除叶子节点入度相等的时,有 $x&#x3D;y+1$</p>
 <h2 id="code"><a class="markdownIt-Anchor" href="#code"></a> Code</h2>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">void solve()&#123;</span><br><span class="line">    int n;</span><br><span class="line">    cin&gt;&gt;n;</span><br><span class="line">    vector&lt;pair&lt;int,int&gt;&gt; a(n);</span><br><span class="line">    for(int i=0;i&lt;n;i++) cin&gt;&gt;a[i].first&gt;&gt;a[i].second;</span><br><span class="line">    sort(all(a));</span><br><span class="line">    int ans=0;</span><br><span class="line">    for (int k=0; k&lt;n; k++) &#123;</span><br><span class="line">        if (a[k].second&gt;=3) ans++;//等边三角形</span><br><span class="line">        if (a[k].second&gt;=2) ans+=k;//自己出两条边的等腰</span><br><span class="line">        for (int i=0; i&lt;k; i++) if (a[i].first*2&gt;a[k].first &amp;&amp; a[i].second&gt;=2) ans++; //自己出一条边的等腰</span><br><span class="line">        //三条边都不一样</span><br><span class="line">        int left=0, right=k-1;</span><br><span class="line">        while (left&lt;right) &#123;</span><br><span class="line">            if (a[left].first+a[right].first&gt;a[k].first) &#123;</span><br><span class="line">                ans+=(right-left);</span><br><span class="line">                right--;</span><br><span class="line">            &#125;</span><br><span class="line">            else left++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    cout&lt;&lt;ans&lt;&lt;el;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">void solve() &#123;</span><br><span class="line">    int n,m;</span><br><span class="line">    cin &gt;&gt; n &gt;&gt; m;</span><br><span class="line">    vector&lt;vector&lt;int&gt;&gt; a(n+1);</span><br><span class="line">    for (int i = 1; i &lt;= m; i++) &#123;</span><br><span class="line">        int u,v;</span><br><span class="line">        cin &gt;&gt; u &gt;&gt; v;</span><br><span class="line">        a[u].push_back(v);</span><br><span class="line">        a[v].push_back(u);</span><br><span class="line">    &#125;</span><br><span class="line">    int x=1,y=1;</span><br><span class="line">    map&lt;int,int&gt; mp;</span><br><span class="line">    for (int i=1;i&lt;=n;i++) &#123;</span><br><span class="line">        int t=a[i].size();</span><br><span class="line">        mp[t]++;</span><br><span class="line">    &#125;</span><br><span class="line">    vector&lt;pair&lt;int,int&gt;&gt; cnt(mp.begin(),mp.end());</span><br><span class="line">    sort(cnt.begin(),cnt.end());</span><br><span class="line">    //cnt[0]即叶子节点的入度</span><br><span class="line">    if (cnt.size()==3) &#123;</span><br><span class="line">        if (cnt[1].second==1) &#123;</span><br><span class="line">            x=cnt[1].first;</span><br><span class="line">            y=cnt[2].first-1;</span><br><span class="line">        &#125;</span><br><span class="line">        else &#123;</span><br><span class="line">            x=cnt[2].first;</span><br><span class="line">            y=cnt[1].first-1;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    else &#123;</span><br><span class="line">        x=cnt[1].first;</span><br><span class="line">        y=x-1;</span><br><span class="line">    &#125;</span><br><span class="line">    cout &lt;&lt; x &lt;&lt; &#x27; &#x27; &lt;&lt; y &lt;&lt; endl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
     </div>
     <footer class="article-footer">
-        <a data-aos="zoom-in" href="/2025/12/16/%E5%8F%8C%E6%8C%87%E9%92%88%E6%88%96%E5%A4%9A%E6%8C%87%E9%92%88/%E6%89%BE%E5%90%88%E6%B3%95%E4%B8%89%E8%A7%92%E5%BD%A2/#comments" class="article-comment-link">
-          <span class="post-comments-count waline-comment-count" data-path="/2025/12/16/%E5%8F%8C%E6%8C%87%E9%92%88%E6%88%96%E5%A4%9A%E6%8C%87%E9%92%88/%E6%89%BE%E5%90%88%E6%B3%95%E4%B8%89%E8%A7%92%E5%BD%A2/" itemprop="commentCount"></span>
+        <a data-aos="zoom-in" href="/2025/12/18/%E8%A7%84%E5%BE%8B%E9%A2%98or%E8%A7%82%E5%AF%9F%E9%A2%98/%E8%A7%82%E5%AF%9F%E5%9B%BE%E7%9A%84%E8%A7%84%E5%BE%8B/#comments" class="article-comment-link">
+          <span class="post-comments-count waline-comment-count" data-path="/2025/12/18/%E8%A7%84%E5%BE%8B%E9%A2%98or%E8%A7%82%E5%AF%9F%E9%A2%98/%E8%A7%82%E5%AF%9F%E5%9B%BE%E7%9A%84%E8%A7%84%E5%BE%8B/" itemprop="commentCount"></span>
           留言
         </a>
         <span data-aos="zoom-in" class="article-visitor-link">
-          <span class="waline-pageview-count" data-path="/2025/12/16/%E5%8F%8C%E6%8C%87%E9%92%88%E6%88%96%E5%A4%9A%E6%8C%87%E9%92%88/%E6%89%BE%E5%90%88%E6%B3%95%E4%B8%89%E8%A7%92%E5%BD%A2/">0</span>
+          <span class="waline-pageview-count" data-path="/2025/12/18/%E8%A7%84%E5%BE%8B%E9%A2%98or%E8%A7%82%E5%AF%9F%E9%A2%98/%E8%A7%82%E5%AF%9F%E5%9B%BE%E7%9A%84%E8%A7%84%E5%BE%8B/">0</span>
           <em class="post-meta-item-text">阅读量</em>
         </span>
-        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item" data-aos="zoom-in"><a class="article-tag-list-link" href="/tags/%E5%8F%8C%E6%8C%87%E9%92%88%E6%88%96%E5%A4%9A%E6%8C%87%E9%92%88/" rel="tag" title="双指针或多指针">双指针或多指针</a></li><li class="article-tag-list-item" data-aos="zoom-in"><a class="article-tag-list-link" href="/tags/%E6%95%B0%E5%AD%A6/" rel="tag" title="数学">数学</a></li></ul>
+        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item" data-aos="zoom-in"><a class="article-tag-list-link" href="/tags/%E5%9B%BE%E8%AE%BA/" rel="tag" title="图论">图论</a></li><li class="article-tag-list-item" data-aos="zoom-in"><a class="article-tag-list-link" href="/tags/%E8%A7%84%E5%BE%8Bor%E8%A7%82%E5%AF%9F/" rel="tag" title="规律or观察">规律or观察</a></li></ul>
 
     </footer>
   </div>
     <nav id="article-nav" aria-label="Article navigation" data-aos="fade-up">
-      <div class="article-nav-link-wrap left">
-          <img data-src="https://l-mio-qh.github.io/images/covers/cover15.jpg" data-sizes="auto" alt="打表观察,找规律(CF2070A)" class="lazyload">
-        <a href="/2025/12/18/%E8%A7%84%E5%BE%8B%E9%A2%98or%E8%A7%82%E5%AF%9F%E9%A2%98/%E6%89%93%E8%A1%A8%E6%89%BE%E8%A7%84%E5%BE%8B/" aria-label="前一篇: 打表观察,找规律(CF2070A)" title="前一篇: 打表观察,找规律(CF2070A)"></a>
-        <div class="article-nav-caption">前一篇</div>
-        <h3 class="article-nav-title">
-            打表观察,找规律(CF2070A)
-        </h3>
-      </div>
     <div class="article-nav-link-wrap right">
-        <img data-src="https://l-mio-qh.github.io/images/covers/cover11.jpg" data-sizes="auto" alt="根据关系式推出判断条件" class="lazyload">
-      <a href="/2025/12/16/%E6%95%B0%E5%AD%A6/math2/" aria-label="后一篇: 根据关系式推出判断条件"  title="后一篇: 根据关系式推出判断条件"></a>
+        <img data-src="https://l-mio-qh.github.io/images/covers/cover17.jpg" data-sizes="auto" alt="利用差分巧妙对每一个x进行尝试(CF1343D)" class="lazyload">
+      <a href="/2025/12/18/%E6%95%99%E8%82%B2%E6%80%A7%E9%A2%98%E7%9B%AE/%E5%88%A9%E7%94%A8%E5%B7%AE%E5%88%86%E5%B7%A7%E5%A6%99%E5%AF%B9%E6%AF%8F%E4%B8%80%E4%B8%AAx%E5%B0%9D%E8%AF%95/" aria-label="后一篇: 利用差分巧妙对每一个x进行尝试(CF1343D)"  title="后一篇: 利用差分巧妙对每一个x进行尝试(CF1343D)"></a>
       <div class="article-nav-caption">后一篇</div>
       <h3 class="article-nav-title">
-          根据关系式推出判断条件
+          利用差分巧妙对每一个x进行尝试(CF1343D)
       </h3>
     </div>
   </nav>
@@ -472,14 +465,14 @@
       <script data-pjax>
         window.REIMU_POST = {
           author: "Mio_qh",
-          title: "找合法三角形",
-          url: "http://example.com/2025/12/16/%E5%8F%8C%E6%8C%87%E9%92%88%E6%88%96%E5%A4%9A%E6%8C%87%E9%92%88/%E6%89%BE%E5%90%88%E6%B3%95%E4%B8%89%E8%A7%92%E5%BD%A2/",
+          title: "打表观察,找规律(CF2070A)",
+          url: "http://example.com/2025/12/18/%E8%A7%84%E5%BE%8B%E9%A2%98or%E8%A7%82%E5%AF%9F%E9%A2%98/%E8%A7%82%E5%AF%9F%E5%9B%BE%E7%9A%84%E8%A7%84%E5%BE%8B/",
           excerpt: "",
           description: "",
-          stripContent: " 题目传送门  大致思路 将数组升序排序,对每一个长度分别计算能构成的不同三角形: 等腰,等边另外算 三边都不相同的三角形:利用&amp;quot;三指针&amp;quot;,说是三指针,其实感觉是双指针,两个指针在当前长度之前滑动,当前指针在计算时是不动的  Code 1234567891011121314151617181920212223void solve()&amp;#123;    int n;    cin&amp;gt;&amp;gt;n;    vector&amp;lt;pair&amp;lt;int,int&amp;gt;&amp;gt; a(",
-          date: "Tue Dec 16 2025 15:26:19 GMT+0800",
-          updated: "Tue Dec 16 2025 19:56:53 GMT+0800",
-          cover: "https://l-mio-qh.github.io/images/covers/cover13.jpg",
+          stripContent: " 题目传送门  大致思路 根据示例和 $x!&amp;#x3D;1$ 且 $y!&amp;#x3D;1$ 观察发现,中心顶点的入度唯一当且仅当 $x!&amp;#x3D;y+1$ 这时候直接根据入度计算答案即可 中心顶点入度和除叶子节点入度相等的时,有 $x&amp;#x3D;y+1$  Code 1234567891011121314151617181920212223242526272829303132333435void solve() &amp;#123;    int n,m;    cin &amp;gt;&amp;gt; n &amp;gt;&amp;",
+          date: "Thu Dec 18 2025 19:52:18 GMT+0800",
+          updated: "Thu Dec 18 2025 20:02:37 GMT+0800",
+          cover: "https://l-mio-qh.github.io/images/covers/cover19.jpg",
         };
       </script>
         
