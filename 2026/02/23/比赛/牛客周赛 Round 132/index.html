@@ -9,7 +9,7 @@
   
   <script>window.REIMU_CONFIG = {};window.REIMU_CONFIG.icon_font = '4552607_4k4bc36ef96';window.REIMU_CONFIG.clipboard_tips = {"success":{"zh-CN":"复制成功 (*^▽^*)"},"fail":{"zh-CN":"复制失败 (ﾟ⊿ﾟ)ﾂ"},"copyright":{"enable":false,"count":50,"license_type":"by-nc-sa"}};window.REIMU_CONFIG.clipboard_tips.copyright.content = '本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！';window.REIMU_CONFIG.code_block = {"expand":true};window.REIMU_CONFIG.base = 'http://example.com';</script>
   <title>
-    被诈骗的一集 | Mio_qh
+    牛客周赛 Round 132(比赛记录) | Mio_qh
   </title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin><link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Mulish%3A400%2C400italic%2C700%2C700italic%7CNoto+Serif+SC%3A400%2C400italic%2C700%2C700italic&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mulish%3A400%2C400italic%2C700%2C700italic%7CNoto+Serif+SC%3A400%2C400italic%2C700%2C700italic&display=swap" media="print" onload="this.media&#x3D;&#39;all&#39;">
@@ -17,18 +17,19 @@
     
 <link rel="stylesheet" href="/css/loader.css">
 
-    <meta name="description" content="前言 本文两道题目均来自fjnu第29届低年级程序设计大赛: 热身赛D 正赛F  热身赛D  大致思路 $(1≤k)$ 很明显,所有数&amp;上$0$都会变成0 ,就只会有一种元素,肯定满足且最小(非负整数) 仔细观察一下,可以发现按位异或和按位或并不会改变元素种类个数  Code 12345678910111213141516void solve() &#123;    int n,k;">
+    <meta name="description" content="第一次AK周赛  比赛传送门  A 开始时间 +$5$(mod24) 即可  Code 12345void solve() &#123;    int n;    cin &gt;&gt; n;    cout &lt;&lt; (n+5)%24 &lt;&lt;el;&#125;  B 五的倍数,即末位数字为 $0$ 或 $5$ 且数字本身不为 $0$ 但据数据范围可知 $n$ 不为 $0$ ,">
 <meta property="og:type" content="article">
-<meta property="og:title" content="被诈骗的一集">
-<meta property="og:url" content="http://example.com/2025/12/16/%E8%B4%AA%E5%BF%83%EF%BC%88%E6%80%9D%E7%BB%B4%E5%8D%A0%E4%B8%BB%E8%A6%81%EF%BC%89/%E8%A2%AB%E8%AF%88%E9%AA%97%E7%9A%84%E4%B8%80%E9%9B%86/index.html">
+<meta property="og:title" content="牛客周赛 Round 132(比赛记录)">
+<meta property="og:url" content="http://example.com/2026/02/23/%E6%AF%94%E8%B5%9B/%E7%89%9B%E5%AE%A2%E5%91%A8%E8%B5%9B%20Round%20132/index.html">
 <meta property="og:site_name" content="Mio_qh">
-<meta property="og:description" content="前言 本文两道题目均来自fjnu第29届低年级程序设计大赛: 热身赛D 正赛F  热身赛D  大致思路 $(1≤k)$ 很明显,所有数&amp;上$0$都会变成0 ,就只会有一种元素,肯定满足且最小(非负整数) 仔细观察一下,可以发现按位异或和按位或并不会改变元素种类个数  Code 12345678910111213141516void solve() &#123;    int n,k;">
+<meta property="og:description" content="第一次AK周赛  比赛传送门  A 开始时间 +$5$(mod24) 即可  Code 12345void solve() &#123;    int n;    cin &gt;&gt; n;    cout &lt;&lt; (n+5)%24 &lt;&lt;el;&#125;  B 五的倍数,即末位数字为 $0$ 或 $5$ 且数字本身不为 $0$ 但据数据范围可知 $n$ 不为 $0$ ,">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2025-12-16T05:55:17.323Z">
-<meta property="article:modified_time" content="2025-12-16T06:15:04.957Z">
+<meta property="article:published_time" content="2026-02-23T07:53:45.098Z">
+<meta property="article:modified_time" content="2026-02-23T08:34:53.056Z">
 <meta property="article:author" content="Mio_qh">
 <meta property="article:tag" content="数据结构">
 <meta property="article:tag" content="思维">
+<meta property="article:tag" content="枚举">
 <meta name="twitter:card" content="summary">
     <link rel="alternate" href="/atom.xml" title="Mio_qh" type="application/atom+xml">
     <link rel="shortcut icon" href="/images/favicon.ico">
@@ -131,11 +132,11 @@
 </div>
 <header id="header" aria-label="Site header">
     <picture></picture>
-    <img  fetchpriority="high" src="https://l-mio-qh.github.io/images/covers/cover12.jpg" alt="被诈骗的一集">
+    <img  fetchpriority="high" src="https://l-mio-qh.github.io/images/covers/cover1.jpg" alt="牛客周赛 Round 132(比赛记录)">
   <div id="header-outer">
     <div id="header-title">
           <span id="logo">
-            <h1 data-aos="slide-up">被诈骗的一集</h1>
+            <h1 data-aos="slide-up">牛客周赛 Round 132(比赛记录)</h1>
           </span>
         <h2 id="subtitle-wrap" data-aos="slide-down">
         </h2>
@@ -150,7 +151,7 @@
     <div class="sidebar-wrap" data-aos="fade-up">
           <div class="sidebar-toc-sidebar"><h3 class="toc-title">文章目录</h3>
 <div class="sidebar-toc-wrapper toc-div-class" >
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-number">1.</span> <span class="toc-text"> 前言</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%83%AD%E8%BA%AB%E8%B5%9Bd"><span class="toc-number">1.1.</span> <span class="toc-text"> 热身赛D</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%A7%E8%87%B4%E6%80%9D%E8%B7%AF"><span class="toc-number">1.1.1.</span> <span class="toc-text"> 大致思路</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#code"><span class="toc-number">1.1.2.</span> <span class="toc-text"> Code</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%AD%A3%E8%B5%9Bf"><span class="toc-number">1.2.</span> <span class="toc-text"> 正赛F</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%A7%E8%87%B4%E6%80%9D%E8%B7%AF-2"><span class="toc-number">1.2.1.</span> <span class="toc-text"> 大致思路</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#code-2"><span class="toc-number">1.2.2.</span> <span class="toc-text"> Code</span></a></li></ol></li></ol></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%AF%94%E8%B5%9B%E4%BC%A0%E9%80%81%E9%97%A8"><span class="toc-number">1.</span> <span class="toc-text"> 比赛传送门</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#a"><span class="toc-number">1.1.</span> <span class="toc-text"> A</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#code"><span class="toc-number">1.2.</span> <span class="toc-text"> Code</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#b"><span class="toc-number">1.3.</span> <span class="toc-text"> B</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#code-2"><span class="toc-number">1.4.</span> <span class="toc-text"> Code</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#c"><span class="toc-number">1.5.</span> <span class="toc-text"> C</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#code-3"><span class="toc-number">1.6.</span> <span class="toc-text"> Code</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#d"><span class="toc-number">1.7.</span> <span class="toc-text"> D</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#code-4"><span class="toc-number">1.8.</span> <span class="toc-text"> Code</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#e"><span class="toc-number">1.9.</span> <span class="toc-text"> E</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#code-5"><span class="toc-number">1.10.</span> <span class="toc-text"> Code</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#f"><span class="toc-number">1.11.</span> <span class="toc-text"> F</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#code-6"><span class="toc-number">1.12.</span> <span class="toc-text"> Code</span></a></li></ol></li></ol>
 </div>
 </div>
           <div class="sidebar-common-sidebar hidden"><div class="sidebar-author">
@@ -222,18 +223,18 @@
   </div>
 </aside>
 
-          <section id="main" aria-label="Main content"><article id="post-贪心（思维占主要）/被诈骗的一集" class="h-entry article" itemscope itemtype="https://schema.org/BlogPosting">
+          <section id="main" aria-label="Main content"><article id="post-比赛/牛客周赛 Round 132" class="h-entry article" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-inner" data-aos="fade-up">
     <div class="article-meta">
       <div class="article-date">
   <span class="article-date-link icon-calendar" data-aos="zoom-in">
-    <time datetime="2025-12-16T05:55:17.323Z" itemprop="datePublished">2025-12-16</time>
-    <time style="display: none;" id="post-update-time">2025-12-16</time>
+    <time datetime="2026-02-23T07:53:45.098Z" itemprop="datePublished">2026-02-23</time>
+    <time style="display: none;" id="post-update-time">2026-02-23</time>
   </span>
 </div>
 
         <div class="article-category">
-    <a class="article-category-link" href="/categories/%E7%AE%97%E6%B3%95%E9%A2%98/" title="算法题">算法题</a>
+    <a class="article-category-link" href="/categories/%E6%AF%94%E8%B5%9B%E8%AE%B0%E5%BD%95/" title="比赛记录">比赛记录</a>
   </div>
 
     </div>
@@ -241,51 +242,61 @@
     <div class="hr-line"></div>
     
     <div class="e-content article-entry" itemprop="articleBody">
-        <h1 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h1>
-<p>本文两道题目均来自fjnu第29届低年级程序设计大赛:<br />
-<a target="_blank" rel="noopener" href="https://fjnuacm.top/p/JCPC2025warmD?tid=6936759edfc2a2a864eec8d1">热身赛D</a><br />
-<a target="_blank" rel="noopener" href="https://fjnuacm.top/p/JCPC2025F?tid=693675eadfc2a2a864eec8fb">正赛F</a></p>
-<h2 id="热身赛d"><a class="markdownIt-Anchor" href="#热身赛d"></a> <a target="_blank" rel="noopener" href="https://fjnuacm.top/p/JCPC2025warmD?tid=6936759edfc2a2a864eec8d1">热身赛D</a></h2>
-<h3 id="大致思路"><a class="markdownIt-Anchor" href="#大致思路"></a> 大致思路</h3>
-<p>$(1≤k)$<br />
-很明显,所有数&amp;上$0$都会变成0 ,就只会有一种元素,肯定满足且最小(非负整数)<br />
-仔细观察一下,可以发现按位异或和按位或并不会改变元素种类个数</p>
-<h3 id="code"><a class="markdownIt-Anchor" href="#code"></a> Code</h3>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">void solve() &#123;</span><br><span class="line">    int n,k;</span><br><span class="line">    cin &gt;&gt; n &gt;&gt; k;</span><br><span class="line">    set&lt;string&gt; s;</span><br><span class="line">    for(int i=0;i&lt;n;i++) &#123;</span><br><span class="line">        string x;</span><br><span class="line">        cin &gt;&gt; x;</span><br><span class="line">        s.insert(x);</span><br><span class="line">    &#125;</span><br><span class="line">    int t=s.size();</span><br><span class="line">    cout &lt;&lt; 0 &lt;&lt; &quot; &quot;;</span><br><span class="line">    if (t&gt;=k)  cout&lt;&lt;0&lt;&lt;&quot; &quot;;</span><br><span class="line">    else cout&lt;&lt;-1&lt;&lt;&quot; &quot;;</span><br><span class="line">    if (t==k)  cout&lt;&lt;0&lt;&lt;&quot; &quot;;</span><br><span class="line">    else cout&lt;&lt;-1&lt;&lt;&quot; &quot;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="正赛f"><a class="markdownIt-Anchor" href="#正赛f"></a> <a target="_blank" rel="noopener" href="https://fjnuacm.top/p/JCPC2025F?tid=693675eadfc2a2a864eec8fb">正赛F</a></h2>
-<h3 id="大致思路-2"><a class="markdownIt-Anchor" href="#大致思路-2"></a> 大致思路</h3>
-<p>修改是根据值来修改的,如果修改区间不包括最大值,那么其他区间 +1 并不会影响当前最大值,所以只要在修改区间包含当前最大值的时候将最大值 +1即可</p>
-<h3 id="code-2"><a class="markdownIt-Anchor" href="#code-2"></a> Code</h3>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">void solve() &#123;</span><br><span class="line">	int n,q;</span><br><span class="line">	cin &gt;&gt; n &gt;&gt; q;</span><br><span class="line">	int mx=LLONG_MIN;</span><br><span class="line">	for (int i=1;i&lt;=n;i++) &#123;</span><br><span class="line">		int x;</span><br><span class="line">		cin &gt;&gt; x;</span><br><span class="line">		mx=max(mx,x);</span><br><span class="line">	&#125;</span><br><span class="line">	while (q--) &#123;</span><br><span class="line">		int c,l,r;</span><br><span class="line">		cin &gt;&gt; c &gt;&gt; l &gt;&gt; r;</span><br><span class="line">		if (l&lt;=mx &amp;&amp; r&gt;=mx) &#123;</span><br><span class="line">			if (c==1) mx++;</span><br><span class="line">			else mx--;</span><br><span class="line">		&#125;</span><br><span class="line">		cout &lt;&lt; mx&lt;&lt;el;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <p>第一次AK周赛</p>
+<h1 id="比赛传送门"><a class="markdownIt-Anchor" href="#比赛传送门"></a> <a target="_blank" rel="noopener" href="https://ac.nowcoder.com/acm/contest/128672">比赛传送门</a></h1>
+<h2 id="a"><a class="markdownIt-Anchor" href="#a"></a> <a target="_blank" rel="noopener" href="https://ac.nowcoder.com/acm/contest/128672/A">A</a></h2>
+<p>开始时间 +$5$(mod24) 即可</p>
+<h2 id="code"><a class="markdownIt-Anchor" href="#code"></a> Code</h2>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">void solve() &#123;</span><br><span class="line">    int n;</span><br><span class="line">    cin &gt;&gt; n;</span><br><span class="line">    cout &lt;&lt; (n+5)%24 &lt;&lt;el;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="b"><a class="markdownIt-Anchor" href="#b"></a> <a target="_blank" rel="noopener" href="https://ac.nowcoder.com/acm/contest/128672/B">B</a></h2>
+<p>五的倍数,即末位数字为 $0$ 或 $5$ 且数字本身不为 $0$<br />
+但据数据范围可知 $n$ 不为 $0$ ,无需特判直接判断每一位看看是不是 $5$ 或 $0$即可</p>
+<h2 id="code-2"><a class="markdownIt-Anchor" href="#code-2"></a> Code</h2>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">void solve() &#123;</span><br><span class="line">    int n;</span><br><span class="line">    cin &gt;&gt; n;</span><br><span class="line">    while (n) &#123;</span><br><span class="line">        int t=n%10;</span><br><span class="line">        if (t==5 || t==0) &#123;</span><br><span class="line">            cout &lt;&lt;&quot;YES&quot;&lt;&lt;el;</span><br><span class="line">            return;</span><br><span class="line">        &#125;</span><br><span class="line">        n=n/10;</span><br><span class="line">    &#125;</span><br><span class="line">    cout&lt;&lt;&quot;NO&quot;&lt;&lt;el;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="c"><a class="markdownIt-Anchor" href="#c"></a> <a target="_blank" rel="noopener" href="https://ac.nowcoder.com/acm/contest/128672/C">C</a></h2>
+<p>对于$(2≦i≦n)$ 如果gcd(a[i],a[i-1])为 $1$ ,那么肯定要修改,可以修改为任意正整数,那就修改成相邻的数的倍数,这样左右邻居都能保留不用修改</p>
+<h2 id="code-3"><a class="markdownIt-Anchor" href="#code-3"></a> Code</h2>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">void solve() &#123;</span><br><span class="line">    int n;</span><br><span class="line">    cin &gt;&gt; n;</span><br><span class="line">    vector&lt;int&gt; a(n+1);</span><br><span class="line">    for (int i = 1; i &lt;= n; i++) cin &gt;&gt; a[i];</span><br><span class="line">    int ans=0;</span><br><span class="line">    if (a[1]==1) &#123;</span><br><span class="line">        ans++;</span><br><span class="line">        a[1]=a[2];</span><br><span class="line">    &#125;</span><br><span class="line">    for (int i = 2; i &lt;= n; i++) &#123;</span><br><span class="line">        int t=gcd(a[i],a[i-1]);</span><br><span class="line">        if (t&lt;=1) &#123;</span><br><span class="line">            ans++;</span><br><span class="line">            if (i!=n) a[i]=a[i-1]*a[i+1];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    cout&lt;&lt;ans&lt;&lt;el;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="d"><a class="markdownIt-Anchor" href="#d"></a> <a target="_blank" rel="noopener" href="https://ac.nowcoder.com/acm/contest/128672/D">D</a></h2>
+<p>先求所有无序对的总和 $sum$ ,以及奇偶性不同的无序对对数 $cnt$ (通过奇数个数乘偶数个数求得)<br />
+因为 $a_i +a_j$ 为奇数即二者奇偶性不同时除以 $2$ 会损失 $0.5$<br />
+所以答案就为 $(sum-cnt)&#x2F;2$</p>
+<h2 id="code-4"><a class="markdownIt-Anchor" href="#code-4"></a> Code</h2>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">void solve() &#123;</span><br><span class="line">    int n;</span><br><span class="line">    cin &gt;&gt;n;</span><br><span class="line">    vector&lt;int&gt; a(n+1);</span><br><span class="line">    int sum=0;</span><br><span class="line">    int cnt=0;</span><br><span class="line">    for (int i = 1; i &lt;= n; i++) &#123;</span><br><span class="line">        cin&gt;&gt;a[i];</span><br><span class="line">        sum+=a[i];</span><br><span class="line">        if (a[i]%2==0) cnt++;</span><br><span class="line">    &#125;</span><br><span class="line">    sum=(n-1)*sum;</span><br><span class="line">    int ans=(sum-cnt*(n-cnt))/2;</span><br><span class="line">    cout&lt;&lt;ans&lt;&lt;el;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="e"><a class="markdownIt-Anchor" href="#e"></a> <a target="_blank" rel="noopener" href="https://ac.nowcoder.com/acm/contest/128672/E">E</a></h2>
+<p>BFS模拟过程即可,注意用 $set$ 存走过的数避免重复陷入循环<br />
+同时加入位数剪枝</p>
+<h2 id="code-5"><a class="markdownIt-Anchor" href="#code-5"></a> Code</h2>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line">void solve() &#123;</span><br><span class="line">    int a,b,k;</span><br><span class="line">    cin&gt;&gt;a&gt;&gt;b&gt;&gt;k;</span><br><span class="line">    auto bzd=[&amp;](int x)-&gt; int&#123;</span><br><span class="line">        int bbb=0;</span><br><span class="line">        if (x==0) return 1;</span><br><span class="line">        while (x) &#123;</span><br><span class="line">            x/=10;</span><br><span class="line">            bbb++;</span><br><span class="line">        &#125;</span><br><span class="line">        return bbb;</span><br><span class="line">    &#125;;</span><br><span class="line">    int count=bzd(b);</span><br><span class="line">    queue&lt;int&gt; q;</span><br><span class="line">    unordered_map&lt;int,int&gt; mp;</span><br><span class="line">    q.push(a);</span><br><span class="line">    mp[a]=0;</span><br><span class="line">    unordered_set&lt;int&gt; vis;</span><br><span class="line">    vis.insert(a);</span><br><span class="line">    while(!q.empty()) &#123;</span><br><span class="line">        auto p=q.front();</span><br><span class="line">        q.pop();</span><br><span class="line">        if (p==b) &#123;</span><br><span class="line">            cout&lt;&lt;mp[p]&lt;&lt;el;</span><br><span class="line">            return;</span><br><span class="line">        &#125;</span><br><span class="line">        int t=p+k;</span><br><span class="line">        if (vis.find(t)==vis.end() &amp;&amp; bzd(t)&lt;=count) &#123;</span><br><span class="line">            vis.insert(t);</span><br><span class="line">            q.push(t);</span><br><span class="line">            mp[t]=mp[p]+1;</span><br><span class="line">        &#125;</span><br><span class="line">        if (p%10!=0) &#123;</span><br><span class="line">            int x=0;</span><br><span class="line">            int temp=p;</span><br><span class="line">            while (temp) &#123;</span><br><span class="line">                x=x*10+temp%10;</span><br><span class="line">                temp/=10;</span><br><span class="line">            &#125;</span><br><span class="line">            if (bzd(x)&lt;=count &amp;&amp; vis.find(x)==vis.end()) &#123;</span><br><span class="line">                q.push(x);</span><br><span class="line">                mp[x]=mp[p]+1;</span><br><span class="line">                vis.insert(x);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    cout &lt;&lt;-1&lt;&lt;el;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="f"><a class="markdownIt-Anchor" href="#f"></a> <a target="_blank" rel="noopener" href="https://ac.nowcoder.com/acm/contest/128672/F">F</a></h2>
+<p>通过改一段区间来最小化邻居距离,不难想到对每一个位置倒置时产生的变化值求前缀和,然后求得区间变化量的最小值(可能是正,也可能是负)<br />
+若是正数可以选择不进行倒置操作,负数则可以更新答案<br />
+对于变化值怎么求:<br />
+如果当前位是 $1$ (即$a_i&#x3D;&#39;1&#39;$) 变化值为 $cnt1[i]-cnt0[i]-1$<br />
+如果当前位是 $0$ 变化值为 $cnt0[i]-cnt1[i]-1$</p>
+<h2 id="code-6"><a class="markdownIt-Anchor" href="#code-6"></a> Code</h2>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line">void solve() &#123;</span><br><span class="line">    int n,m;</span><br><span class="line">    cin &gt;&gt; n &gt;&gt; m;</span><br><span class="line">    vector&lt;int&gt; cnt1(m+1);</span><br><span class="line">    vector&lt;int&gt; cnt0(m+1);</span><br><span class="line">    vector&lt;string&gt; a(n+1);</span><br><span class="line">    for (int i = 1; i &lt;= n; i++) &#123;</span><br><span class="line">        string s;</span><br><span class="line">        cin &gt;&gt; s;</span><br><span class="line">        s=&quot; &quot;+s;</span><br><span class="line">        for (int j = 1; j &lt;= m; j++) &#123;</span><br><span class="line">            if (s[j]==&#x27;1&#x27;) cnt1[j]++;</span><br><span class="line">            else cnt0[j]++;</span><br><span class="line">        &#125;</span><br><span class="line">        a[i]=s;</span><br><span class="line">    &#125;</span><br><span class="line">    for (int i = 1; i &lt;= n; i++) &#123;</span><br><span class="line">        vector&lt;int&gt; d(m+1);</span><br><span class="line">        int ans=0;</span><br><span class="line">        for (int j = 1; j &lt;= m; j++) &#123;</span><br><span class="line">            if (a[i][j]==&#x27;1&#x27;) &#123;</span><br><span class="line">                d[j]=cnt1[j]-cnt0[j]-1;</span><br><span class="line">                ans+=cnt0[j];</span><br><span class="line">            &#125;</span><br><span class="line">            else &#123;</span><br><span class="line">                d[j]=cnt0[j]-cnt1[j]-1;</span><br><span class="line">                ans+=cnt1[j];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        vector&lt;int&gt; pre(m+1);</span><br><span class="line">        for (int j = 1; j &lt;= m; j++) pre[j]=pre[j-1]+d[j];</span><br><span class="line">        int res=LLONG_MAX;</span><br><span class="line">        int mx=0;</span><br><span class="line">        for (int j = 1; j &lt;= m; j++) &#123;</span><br><span class="line">            int x=pre[j];</span><br><span class="line">            int cur=x-mx;</span><br><span class="line">            res=min(res,cur);</span><br><span class="line">            mx=max(mx,x);</span><br><span class="line">        &#125;</span><br><span class="line">        ans=min(ans,res+ans);</span><br><span class="line">        cout&lt;&lt;ans&lt;&lt;el;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
     </div>
     <footer class="article-footer">
-        <a data-aos="zoom-in" href="/2025/12/16/%E8%B4%AA%E5%BF%83%EF%BC%88%E6%80%9D%E7%BB%B4%E5%8D%A0%E4%B8%BB%E8%A6%81%EF%BC%89/%E8%A2%AB%E8%AF%88%E9%AA%97%E7%9A%84%E4%B8%80%E9%9B%86/#comments" class="article-comment-link">
-          <span class="post-comments-count waline-comment-count" data-path="/2025/12/16/%E8%B4%AA%E5%BF%83%EF%BC%88%E6%80%9D%E7%BB%B4%E5%8D%A0%E4%B8%BB%E8%A6%81%EF%BC%89/%E8%A2%AB%E8%AF%88%E9%AA%97%E7%9A%84%E4%B8%80%E9%9B%86/" itemprop="commentCount"></span>
+        <a data-aos="zoom-in" href="/2026/02/23/%E6%AF%94%E8%B5%9B/%E7%89%9B%E5%AE%A2%E5%91%A8%E8%B5%9B%20Round%20132/#comments" class="article-comment-link">
+          <span class="post-comments-count waline-comment-count" data-path="/2026/02/23/%E6%AF%94%E8%B5%9B/%E7%89%9B%E5%AE%A2%E5%91%A8%E8%B5%9B%20Round%20132/" itemprop="commentCount"></span>
           留言
         </a>
         <span data-aos="zoom-in" class="article-visitor-link">
-          <span class="waline-pageview-count" data-path="/2025/12/16/%E8%B4%AA%E5%BF%83%EF%BC%88%E6%80%9D%E7%BB%B4%E5%8D%A0%E4%B8%BB%E8%A6%81%EF%BC%89/%E8%A2%AB%E8%AF%88%E9%AA%97%E7%9A%84%E4%B8%80%E9%9B%86/">0</span>
+          <span class="waline-pageview-count" data-path="/2026/02/23/%E6%AF%94%E8%B5%9B/%E7%89%9B%E5%AE%A2%E5%91%A8%E8%B5%9B%20Round%20132/">0</span>
           <em class="post-meta-item-text">阅读量</em>
         </span>
-        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item" data-aos="zoom-in"><a class="article-tag-list-link" href="/tags/%E6%80%9D%E7%BB%B4/" rel="tag" title="思维">思维</a></li><li class="article-tag-list-item" data-aos="zoom-in"><a class="article-tag-list-link" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" rel="tag" title="数据结构">数据结构</a></li></ul>
+        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item" data-aos="zoom-in"><a class="article-tag-list-link" href="/tags/%E6%80%9D%E7%BB%B4/" rel="tag" title="思维">思维</a></li><li class="article-tag-list-item" data-aos="zoom-in"><a class="article-tag-list-link" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" rel="tag" title="数据结构">数据结构</a></li><li class="article-tag-list-item" data-aos="zoom-in"><a class="article-tag-list-link" href="/tags/%E6%9E%9A%E4%B8%BE/" rel="tag" title="枚举">枚举</a></li></ul>
 
     </footer>
   </div>
     <nav id="article-nav" aria-label="Article navigation" data-aos="fade-up">
-      <div class="article-nav-link-wrap left">
-          <img data-src="https://l-mio-qh.github.io/images/covers/cover8.jpg" data-sizes="auto" alt="二分快速查找修改区间,并配合差分修改" class="lazyload">
-        <a href="/2025/12/16/%E4%BA%8C%E5%88%86/%E4%BA%8C%E5%88%86+%E6%8E%92%E5%BA%8F+%E5%B7%AE%E5%88%86+%E7%BB%93%E6%9E%84%E4%BD%93%E4%BF%9D%E5%AD%98%E7%B4%A2%E5%BC%95/" aria-label="前一篇: 二分快速查找修改区间,并配合差分修改" title="前一篇: 二分快速查找修改区间,并配合差分修改"></a>
-        <div class="article-nav-caption">前一篇</div>
-        <h3 class="article-nav-title">
-            二分快速查找修改区间,并配合差分修改
-        </h3>
-      </div>
     <div class="article-nav-link-wrap right">
-        <img data-src="https://l-mio-qh.github.io/images/covers/cover9.jpg" data-sizes="auto" alt="脱水缩合" class="lazyload">
-      <a href="/2025/12/16/%E6%A8%A1%E6%8B%9F/%E8%84%B1%E6%B0%B4%E7%BC%A9%E5%90%88/" aria-label="后一篇: 脱水缩合"  title="后一篇: 脱水缩合"></a>
+        <img data-src="https://l-mio-qh.github.io/images/covers/cover5.jpg" data-sizes="auto" alt="牛客周赛 Round 123(补题)" class="lazyload">
+      <a href="/2025/12/22/%E8%A1%A5%E9%A2%98/%E7%89%9B%E5%AE%A2%E5%91%A8%E8%B5%9B%20Round%20123/" aria-label="后一篇: 牛客周赛 Round 123(补题)"  title="后一篇: 牛客周赛 Round 123(补题)"></a>
       <div class="article-nav-caption">后一篇</div>
       <h3 class="article-nav-title">
-          脱水缩合
+          牛客周赛 Round 123(补题)
       </h3>
     </div>
   </nav>
@@ -355,7 +366,7 @@
   <div class="sidebar-wrap">
         <div class="sidebar-toc-sidebar"><h3 class="toc-title">文章目录</h3>
 <div class="sidebar-toc-wrapper toc-div-class" >
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-number">1.</span> <span class="toc-text"> 前言</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%83%AD%E8%BA%AB%E8%B5%9Bd"><span class="toc-number">1.1.</span> <span class="toc-text"> 热身赛D</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%A7%E8%87%B4%E6%80%9D%E8%B7%AF"><span class="toc-number">1.1.1.</span> <span class="toc-text"> 大致思路</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#code"><span class="toc-number">1.1.2.</span> <span class="toc-text"> Code</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%AD%A3%E8%B5%9Bf"><span class="toc-number">1.2.</span> <span class="toc-text"> 正赛F</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%A7%E8%87%B4%E6%80%9D%E8%B7%AF-2"><span class="toc-number">1.2.1.</span> <span class="toc-text"> 大致思路</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#code-2"><span class="toc-number">1.2.2.</span> <span class="toc-text"> Code</span></a></li></ol></li></ol></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%AF%94%E8%B5%9B%E4%BC%A0%E9%80%81%E9%97%A8"><span class="toc-number">1.</span> <span class="toc-text"> 比赛传送门</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#a"><span class="toc-number">1.1.</span> <span class="toc-text"> A</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#code"><span class="toc-number">1.2.</span> <span class="toc-text"> Code</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#b"><span class="toc-number">1.3.</span> <span class="toc-text"> B</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#code-2"><span class="toc-number">1.4.</span> <span class="toc-text"> Code</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#c"><span class="toc-number">1.5.</span> <span class="toc-text"> C</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#code-3"><span class="toc-number">1.6.</span> <span class="toc-text"> Code</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#d"><span class="toc-number">1.7.</span> <span class="toc-text"> D</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#code-4"><span class="toc-number">1.8.</span> <span class="toc-text"> Code</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#e"><span class="toc-number">1.9.</span> <span class="toc-text"> E</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#code-5"><span class="toc-number">1.10.</span> <span class="toc-text"> Code</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#f"><span class="toc-number">1.11.</span> <span class="toc-text"> F</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#code-6"><span class="toc-number">1.12.</span> <span class="toc-text"> Code</span></a></li></ol></li></ol>
 </div>
 </div>
         <div class="sidebar-common-sidebar hidden"><div class="sidebar-author">
@@ -481,14 +492,14 @@
       <script data-pjax>
         window.REIMU_POST = {
           author: "Mio_qh",
-          title: "被诈骗的一集",
-          url: "http://example.com/2025/12/16/%E8%B4%AA%E5%BF%83%EF%BC%88%E6%80%9D%E7%BB%B4%E5%8D%A0%E4%B8%BB%E8%A6%81%EF%BC%89/%E8%A2%AB%E8%AF%88%E9%AA%97%E7%9A%84%E4%B8%80%E9%9B%86/",
+          title: "牛客周赛 Round 132(比赛记录)",
+          url: "http://example.com/2026/02/23/%E6%AF%94%E8%B5%9B/%E7%89%9B%E5%AE%A2%E5%91%A8%E8%B5%9B%20Round%20132/",
           excerpt: "",
           description: "",
-          stripContent: " 前言 本文两道题目均来自fjnu第29届低年级程序设计大赛: 热身赛D 正赛F  热身赛D  大致思路 $(1≤k)$ 很明显,所有数&amp;amp;上$0$都会变成0 ,就只会有一种元素,肯定满足且最小(非负整数) 仔细观察一下,可以发现按位异或和按位或并不会改变元素种类个数  Code 12345678910111213141516void solve() &amp;#123;    int n,k;    cin &amp;gt;&amp;gt; n &amp;gt;&amp;gt; k;    set&amp;lt;string&amp;gt; ",
-          date: "Tue Dec 16 2025 13:55:17 GMT+0800",
-          updated: "Tue Dec 16 2025 14:15:04 GMT+0800",
-          cover: "https://l-mio-qh.github.io/images/covers/cover12.jpg",
+          stripContent: "第一次AK周赛  比赛传送门  A 开始时间 +$5$(mod24) 即可  Code 12345void solve() &amp;#123;    int n;    cin &amp;gt;&amp;gt; n;    cout &amp;lt;&amp;lt; (n+5)%24 &amp;lt;&amp;lt;el;&amp;#125;  B 五的倍数,即末位数字为 $0$ 或 $5$ 且数字本身不为 $0$ 但据数据范围可知 $n$ 不为 $0$ ,无需特判直接判断每一位看看是不是 $5$ 或 $0$即可  Code 123456789101112",
+          date: "Mon Feb 23 2026 15:53:45 GMT+0800",
+          updated: "Mon Feb 23 2026 16:34:53 GMT+0800",
+          cover: "https://l-mio-qh.github.io/images/covers/cover1.jpg",
         };
       </script>
         

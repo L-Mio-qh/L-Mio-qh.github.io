@@ -154,7 +154,7 @@
 <div class="sidebar-state">
   <div class="sidebar-state-article">
     <div>文章</div>
-    <div class="sidebar-state-number">25</div>
+    <div class="sidebar-state-number">26</div>
   </div>
   <div class="sidebar-state-category">
     <div>分类</div>
@@ -276,7 +276,7 @@
           <div class="post-categories-cover">
               <img data-src="https://l-mio-qh.github.io/images/covers/cover6.jpg" data-sizes="auto" alt="补题" class="lazyload">
             <h2>补题</h2>
-            <h3>1 篇文章</h3>
+            <h3>2 篇文章</h3>
           </div>
         </div>
         <div class="post-categories-wrap">
@@ -290,8 +290,39 @@
     </div>
       <div class="post-wrapper">
   <div class="post-wrap left" data-aos="fade-up">
-      <a class="post-link" href="/2025/12/15/%E6%AF%94%E8%B5%9B/%E7%89%9B%E5%AE%A2%E5%91%A8%E8%B5%9B%20Round%20122/" aria-label="牛客周赛 Round 122(比赛记录)" title="牛客周赛 Round 122(比赛记录)"></a>
+      <a class="post-link" href="/2025/12/15/%E8%A1%A5%E9%A2%98/%E7%89%9B%E5%AE%A2%E5%91%A8%E8%B5%9B%20Round%20122/" aria-label="牛客周赛 Round 122(补题)" title="牛客周赛 Round 122(补题)"></a>
     <div class="post-cover left">
+        <img data-src="https://l-mio-qh.github.io/images/covers/cover7.jpg" data-sizes="auto" alt="牛客周赛 Round 122(补题)" class="lazyload">
+    </div>
+    <div class="post-info">
+      <div class="post-meta">
+        <span><span class="icon-calendar"></span>2025-12-15</span>
+        <span><span class="icon-pencil"></span>389 字</span>
+        <span><span class="icon-clock"></span>2 分钟</span>
+      </div>
+      <h2 class="post-title">牛客周赛 Round 122(补题)</h2>
+      <article class="post-article">
+           比赛传送门
+ E
+记dp[i]为以i为起点的数组有几个好数组,如果i位置开始有一个块,那么可以状态转移(自己的块加上后面原有的好数组)注:k为a[i]
+$$dp[i]&amp;#x3D;1+dp[i+k]
+$$否则
+$$dp[i]&amp;#x3D;0
+$$最终答案就是dp数组的总和
+接下来的问题就是如何快速判断i位置开始是否有一个块了:
+预处理一个数组 s 其中s[i]表示从位置 i 开始，向右连续出现且值与 a[i]相同的元素所能到达的最远下标
+从右往左扫描:
+如果$a[i]&amp;#x3D;&amp;#x3D;a[i+1]$ 那么$s[i]&amp;#x3D;s[i+1]$
+否则$s[i]&amp;#x3D;i$
+如果$i+k-1
+      </article>
+    </div>
+  </div>
+</div>
+      <div class="post-wrapper">
+  <div class="post-wrap right" data-aos="fade-up">
+      <a class="post-link" href="/2025/12/15/%E6%AF%94%E8%B5%9B/%E7%89%9B%E5%AE%A2%E5%91%A8%E8%B5%9B%20Round%20122/" aria-label="牛客周赛 Round 122(比赛记录)" title="牛客周赛 Round 122(比赛记录)"></a>
+    <div class="post-cover right">
         <img data-src="https://l-mio-qh.github.io/images/covers/cover9.jpg" data-sizes="auto" alt="牛客周赛 Round 122(比赛记录)" class="lazyload">
     </div>
     <div class="post-info">
@@ -312,9 +343,9 @@
   </div>
 </div>
       <div class="post-wrapper">
-  <div class="post-wrap right" data-aos="fade-up">
+  <div class="post-wrap left" data-aos="fade-up">
       <a class="post-link" href="/2025/12/11/%E6%95%99%E8%82%B2%E6%80%A7%E9%A2%98%E7%9B%AE/%E8%83%8C%E5%8C%85dp%E5%88%A4%E6%96%AD%E9%97%AE%E9%A2%98/" aria-label="背包判断能否用n个数之和表示某个数" title="背包判断能否用n个数之和表示某个数"></a>
-    <div class="post-cover right">
+    <div class="post-cover left">
         <img data-src="https://l-mio-qh.github.io/images/covers/cover2.jpeg" data-sizes="auto" alt="背包判断能否用n个数之和表示某个数" class="lazyload">
     </div>
     <div class="post-info">
@@ -342,9 +373,9 @@ $$dp[s+t][newr]&amp;#x3D;dp[s][ol
   </div>
 </div>
       <div class="post-wrapper">
-  <div class="post-wrap left" data-aos="fade-up">
+  <div class="post-wrap right" data-aos="fade-up">
       <a class="post-link" href="/2025/12/11/dp/%E7%9F%A9%E9%98%B5%E5%8F%96%E6%95%B0%E6%B8%B8%E6%88%8F/" aria-label="矩阵取数游戏" title="矩阵取数游戏"></a>
-    <div class="post-cover left">
+    <div class="post-cover right">
         <img data-src="https://l-mio-qh.github.io/images/covers/cover1.jpg" data-sizes="auto" alt="矩阵取数游戏" class="lazyload">
     </div>
     <div class="post-info">
@@ -370,9 +401,9 @@ $$val为取对应数能获得的分数,我们可以预处理一个2的幂数组,
   </div>
 </div>
       <div class="post-wrapper">
-  <div class="post-wrap right" data-aos="fade-up">
+  <div class="post-wrap left" data-aos="fade-up">
       <a class="post-link" href="/2025/12/11/%E6%9D%BF%E9%A2%98/%E5%B9%B6%E6%9F%A5%E9%9B%86/" aria-label="并查集" title="并查集"></a>
-    <div class="post-cover right">
+    <div class="post-cover left">
         <img data-src="https://l-mio-qh.github.io/images/covers/cover3.jpg" data-sizes="auto" alt="并查集" class="lazyload">
     </div>
     <div class="post-info">
@@ -392,9 +423,9 @@ $$val为取对应数能获得的分数,我们可以预处理一个2的幂数组,
   </div>
 </div>
       <div class="post-wrapper">
-  <div class="post-wrap left" data-aos="fade-up">
+  <div class="post-wrap right" data-aos="fade-up">
       <a class="post-link" href="/2025/12/10/%E6%95%B0%E5%AD%A6/math1/" aria-label="观察数据范围并根据数学公式进行枚举(CF2132B)" title="观察数据范围并根据数学公式进行枚举(CF2132B)"></a>
-    <div class="post-cover left">
+    <div class="post-cover right">
         <img data-src="https://l-mio-qh.github.io/images/covers/cover5.jpg" data-sizes="auto" alt="观察数据范围并根据数学公式进行枚举(CF2132B)" class="lazyload">
     </div>
     <div class="post-info">
@@ -433,7 +464,7 @@ $$又有$11≤n≤10^{18}$,于是可以枚举$10^k$,最多枚举18次
   <div id="footer-info">
     <div>
       <span class="icon-copyright"></span>
-        2020-2025
+        2020-2026
       <span class="footer-info-sep rotate"></span>
       Mio_qh
     </div>
@@ -443,10 +474,10 @@ $$又有$11≤n≤10^{18}$,于是可以枚举$10^k$,最多枚举18次
       </div>
       <div>
         <span class="icon-brush"></span>
-        10k
+        11k
         &nbsp;|&nbsp;
         <span class="icon-coffee"></span>
-        01:04
+        01:10
       </div>
       <div>
         <span class="icon-eye"></span>
@@ -474,7 +505,7 @@ $$又有$11≤n≤10^{18}$,于是可以枚举$10^k$,最多枚举18次
 <div class="sidebar-state">
   <div class="sidebar-state-article">
     <div>文章</div>
-    <div class="sidebar-state-number">25</div>
+    <div class="sidebar-state-number">26</div>
   </div>
   <div class="sidebar-state-category">
     <div>分类</div>
