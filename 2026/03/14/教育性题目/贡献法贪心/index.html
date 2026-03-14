@@ -9,7 +9,7 @@
   
   <script>window.REIMU_CONFIG = {};window.REIMU_CONFIG.icon_font = '4552607_4k4bc36ef96';window.REIMU_CONFIG.clipboard_tips = {"success":{"zh-CN":"复制成功 (*^▽^*)"},"fail":{"zh-CN":"复制失败 (ﾟ⊿ﾟ)ﾂ"},"copyright":{"enable":false,"count":50,"license_type":"by-nc-sa"}};window.REIMU_CONFIG.clipboard_tips.copyright.content = '本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！';window.REIMU_CONFIG.code_block = {"expand":true};window.REIMU_CONFIG.base = 'http://example.com';</script>
   <title>
-    CF1974E Money Buys Happiness | Mio_qh
+    贡献法贪心 | Mio_qh
   </title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin><link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Mulish%3A400%2C400italic%2C700%2C700italic%7CNoto+Serif+SC%3A400%2C400italic%2C700%2C700italic&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mulish%3A400%2C400italic%2C700%2C700italic%7CNoto+Serif+SC%3A400%2C400italic%2C700%2C700italic&display=swap" media="print" onload="this.media&#x3D;&#39;all&#39;">
@@ -17,17 +17,18 @@
     
 <link rel="stylesheet" href="/css/loader.css">
 
-    <meta name="description" content="题目传送门  大致思路 注意到题目限制条件快乐值总和$≤10^{5}$ 又 $(1≤m≤50)$,可以想到 $dp$: 记$dp_{i,j}$为在第 $i$ 天获得 $j$ 快乐值的最小花费,于是有: $dp_{i,j}&#x3D;min(dp_{i-1,j},dp_{i,{j-h_i}}+c_i)$ 对于第二项,当且仅当 $h_i≤j$ 且 $c_i+dp_{i,{j-h_i}}≤cur$ 时">
+    <meta name="description" content="题目传送门 N题  大致思路 比较相邻两个操作对答案的贡献,记下标 $i,j$ $i$的贡献:$a_j(a_i*x+b_i)+b_j$ $j$的贡献:$a_i(a_j*x+b_j)+b_i$ 即比较 $a_j*b_i+b_j$ 和 $a_i*b_j+b_i$ 写一个自定义排序即可,注意 $a&#x3D;&#x3D;1$ 和 $a&#x3D;&#x3D;0$要特判(放在最前面)  Code 123">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CF1974E Money Buys Happiness">
-<meta property="og:url" content="http://example.com/2026/03/08/dp/CF1974E%20Money%20Buys%20Happiness/index.html">
+<meta property="og:title" content="贡献法贪心">
+<meta property="og:url" content="http://example.com/2026/03/14/%E6%95%99%E8%82%B2%E6%80%A7%E9%A2%98%E7%9B%AE/%E8%B4%A1%E7%8C%AE%E6%B3%95%E8%B4%AA%E5%BF%83/index.html">
 <meta property="og:site_name" content="Mio_qh">
-<meta property="og:description" content="题目传送门  大致思路 注意到题目限制条件快乐值总和$≤10^{5}$ 又 $(1≤m≤50)$,可以想到 $dp$: 记$dp_{i,j}$为在第 $i$ 天获得 $j$ 快乐值的最小花费,于是有: $dp_{i,j}&#x3D;min(dp_{i-1,j},dp_{i,{j-h_i}}+c_i)$ 对于第二项,当且仅当 $h_i≤j$ 且 $c_i+dp_{i,{j-h_i}}≤cur$ 时">
+<meta property="og:description" content="题目传送门 N题  大致思路 比较相邻两个操作对答案的贡献,记下标 $i,j$ $i$的贡献:$a_j(a_i*x+b_i)+b_j$ $j$的贡献:$a_i(a_j*x+b_j)+b_i$ 即比较 $a_j*b_i+b_j$ 和 $a_i*b_j+b_i$ 写一个自定义排序即可,注意 $a&#x3D;&#x3D;1$ 和 $a&#x3D;&#x3D;0$要特判(放在最前面)  Code 123">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2026-03-08T07:57:35.452Z">
-<meta property="article:modified_time" content="2026-03-08T08:10:10.275Z">
+<meta property="article:published_time" content="2026-03-14T01:56:49.935Z">
+<meta property="article:modified_time" content="2026-03-14T02:04:37.229Z">
 <meta property="article:author" content="Mio_qh">
-<meta property="article:tag" content="dp">
+<meta property="article:tag" content="贪心">
+<meta property="article:tag" content="教育性">
 <meta name="twitter:card" content="summary">
     <link rel="alternate" href="/atom.xml" title="Mio_qh" type="application/atom+xml">
     <link rel="shortcut icon" href="/images/favicon.ico">
@@ -130,11 +131,11 @@
 </div>
 <header id="header" aria-label="Site header">
     <picture></picture>
-    <img  fetchpriority="high" src="https://l-mio-qh.github.io/images/covers/cover15.jpg" alt="CF1974E Money Buys Happiness">
+    <img  fetchpriority="high" src="https://l-mio-qh.github.io/images/covers/cover3.jpeg" alt="贡献法贪心">
   <div id="header-outer">
     <div id="header-title">
           <span id="logo">
-            <h1 data-aos="slide-up">CF1974E Money Buys Happiness</h1>
+            <h1 data-aos="slide-up">贡献法贪心</h1>
           </span>
         <h2 id="subtitle-wrap" data-aos="slide-down">
         </h2>
@@ -221,13 +222,13 @@
   </div>
 </aside>
 
-          <section id="main" aria-label="Main content"><article id="post-dp/CF1974E Money Buys Happiness" class="h-entry article" itemscope itemtype="https://schema.org/BlogPosting">
+          <section id="main" aria-label="Main content"><article id="post-教育性题目/贡献法贪心" class="h-entry article" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-inner" data-aos="fade-up">
     <div class="article-meta">
       <div class="article-date">
   <span class="article-date-link icon-calendar" data-aos="zoom-in">
-    <time datetime="2026-03-08T07:57:35.452Z" itemprop="datePublished">2026-03-08</time>
-    <time style="display: none;" id="post-update-time">2026-03-08</time>
+    <time datetime="2026-03-14T01:56:49.935Z" itemprop="datePublished">2026-03-14</time>
+    <time style="display: none;" id="post-update-time">2026-03-14</time>
   </span>
 </div>
 
@@ -240,48 +241,38 @@
     <div class="hr-line"></div>
     
     <div class="e-content article-entry" itemprop="articleBody">
-        <h1 id="题目传送门"><a class="markdownIt-Anchor" href="#题目传送门"></a> <a target="_blank" rel="noopener" href="https://codeforces.com/contest/1974/problem/E">题目传送门</a></h1>
+        <h1 id="题目传送门"><a class="markdownIt-Anchor" href="#题目传送门"></a> <a target="_blank" rel="noopener" href="https://codeforces.com/gym/106239/attachments">题目传送门</a></h1>
+<p>N题</p>
 <h2 id="大致思路"><a class="markdownIt-Anchor" href="#大致思路"></a> 大致思路</h2>
-<p>注意到题目限制条件快乐值总和$≤10^{5}$<br />
-又 $(1≤m≤50)$,可以想到 $dp$:</p>
-<p>记$dp_{i,j}$为在第 $i$ 天获得 $j$ 快乐值的最小花费,于是有:<br />
-$dp_{i,j}&#x3D;min(dp_{i-1,j},dp_{i,{j-h_i}}+c_i)$<br />
-对于第二项,当且仅当 $h_i≤j$ 且 $c_i+dp_{i,{j-h_i}}≤cur$ 时可以取到<br />
-特别地,当 $j&#x3D;&#x3D;h_i$ 时额外判断一下 $dp_{i,h_i}&#x3D;min(c_i,dp_{i,h_i})$</p>
-<p>然后就是细节:花费可能会超出 $int$ ,要用 $long\ long$<br />
-初始化所有的dp项为极大数字.   特别地: $dp_{i,0}&#x3D;0$</p>
+<p>比较相邻两个操作对答案的贡献,记下标 $i,j$<br />
+$i$的贡献:$a_j(a_i*x+b_i)+b_j$<br />
+$j$的贡献:$a_i(a_j*x+b_j)+b_i$<br />
+即比较 $a_j*b_i+b_j$ 和 $a_i*b_j+b_i$<br />
+写一个自定义排序即可,注意 $a&#x3D;&#x3D;1$ 和 $a&#x3D;&#x3D;0$要特判(放在最前面)</p>
 <h2 id="code"><a class="markdownIt-Anchor" href="#code"></a> Code</h2>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">void solve() &#123;</span><br><span class="line">    int m,x;</span><br><span class="line">    cin &gt;&gt; m &gt;&gt; x;</span><br><span class="line">    int sum=0;</span><br><span class="line">    vector&lt;array&lt;int,2&gt;&gt; hp(m+1);</span><br><span class="line">    int cur=-x;</span><br><span class="line">    for (int i=1;i&lt;=m;i++) &#123;</span><br><span class="line">        cin &gt;&gt; hp[i][0] &gt;&gt;hp[i][1];</span><br><span class="line">        sum+=hp[i][1];</span><br><span class="line">    &#125;</span><br><span class="line">    const int M=1e12;</span><br><span class="line">    vector&lt;vector&lt;int&gt;&gt; dp(m+1,vector&lt;int&gt;(sum+1,M));</span><br><span class="line">    for (int i=1;i&lt;=m;i++) &#123;</span><br><span class="line">        dp[i][0]=0;</span><br><span class="line">        cur+=x;</span><br><span class="line">        int add=hp[i][1];</span><br><span class="line">        for (int h=sum;h&gt;=0;h--) &#123;</span><br><span class="line">            dp[i][h]=min(dp[i-1][h],dp[i][h]);</span><br><span class="line">            if (h-add&gt;=0 &amp;&amp; cur-dp[i-1][h-add]&gt;=hp[i][0]) dp[i][h]=min(dp[i][h],dp[i-1][h-add]+hp[i][0]);</span><br><span class="line">        &#125;</span><br><span class="line">        if (cur&gt;=hp[i][0]) dp[i][add]=min(dp[i][add],hp[i][0]);</span><br><span class="line">    &#125;</span><br><span class="line">    int ans=0;</span><br><span class="line">    for (int h=0;h&lt;=sum;h++) if (dp[m][h]!=M) ans=h;</span><br><span class="line">    cout &lt;&lt; ans &lt;&lt;el;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">bool cmp (const array&lt;int,2&gt; &amp;a,const array&lt;int,2&gt; &amp;b) &#123;</span><br><span class="line">    if (a[0]==0 &amp;&amp; b[0]==0)return a[1]&lt;b[1];</span><br><span class="line">    if (a[0]==0) return true;</span><br><span class="line">    if (b[0]==0) return false;</span><br><span class="line">    if (a[0]==1) return true;</span><br><span class="line">    if (b[0]==1) return false;</span><br><span class="line">    int t1=a[0]*b[1]+a[1];</span><br><span class="line">    int t2=b[0]*a[1]+b[1];</span><br><span class="line">    return t1&lt;t2;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void solve() &#123;</span><br><span class="line">    //a_j*b_i+b_j</span><br><span class="line">    //a_i*b_j+b_i</span><br><span class="line">    const int mod=1e9+7;</span><br><span class="line">    int n;</span><br><span class="line">    cin &gt;&gt; n;</span><br><span class="line">    vector&lt;array&lt;int,2&gt;&gt; a(n);</span><br><span class="line">    for (int i=0;i&lt;n;i++) cin &gt;&gt; a[i][0] &gt;&gt; a[i][1];</span><br><span class="line">    sort(all(a),cmp);</span><br><span class="line">    int x=0;</span><br><span class="line">    for (int i=0;i&lt;n;i++) &#123;</span><br><span class="line">        x=(x*a[i][0])%mod+a[i][1];</span><br><span class="line">        x%=mod;</span><br><span class="line">    &#125;</span><br><span class="line">    cout &lt;&lt; x&lt;&lt;el;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
     </div>
     <footer class="article-footer">
-        <a data-aos="zoom-in" href="/2026/03/08/dp/CF1974E%20Money%20Buys%20Happiness/#comments" class="article-comment-link">
-          <span class="post-comments-count waline-comment-count" data-path="/2026/03/08/dp/CF1974E%20Money%20Buys%20Happiness/" itemprop="commentCount"></span>
+        <a data-aos="zoom-in" href="/2026/03/14/%E6%95%99%E8%82%B2%E6%80%A7%E9%A2%98%E7%9B%AE/%E8%B4%A1%E7%8C%AE%E6%B3%95%E8%B4%AA%E5%BF%83/#comments" class="article-comment-link">
+          <span class="post-comments-count waline-comment-count" data-path="/2026/03/14/%E6%95%99%E8%82%B2%E6%80%A7%E9%A2%98%E7%9B%AE/%E8%B4%A1%E7%8C%AE%E6%B3%95%E8%B4%AA%E5%BF%83/" itemprop="commentCount"></span>
           留言
         </a>
         <span data-aos="zoom-in" class="article-visitor-link">
-          <span class="waline-pageview-count" data-path="/2026/03/08/dp/CF1974E%20Money%20Buys%20Happiness/">0</span>
+          <span class="waline-pageview-count" data-path="/2026/03/14/%E6%95%99%E8%82%B2%E6%80%A7%E9%A2%98%E7%9B%AE/%E8%B4%A1%E7%8C%AE%E6%B3%95%E8%B4%AA%E5%BF%83/">0</span>
           <em class="post-meta-item-text">阅读量</em>
         </span>
-        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item" data-aos="zoom-in"><a class="article-tag-list-link" href="/tags/dp/" rel="tag" title="dp">dp</a></li></ul>
+        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item" data-aos="zoom-in"><a class="article-tag-list-link" href="/tags/%E6%95%99%E8%82%B2%E6%80%A7/" rel="tag" title="教育性">教育性</a></li><li class="article-tag-list-item" data-aos="zoom-in"><a class="article-tag-list-link" href="/tags/%E8%B4%AA%E5%BF%83/" rel="tag" title="贪心">贪心</a></li></ul>
 
     </footer>
   </div>
     <nav id="article-nav" aria-label="Article navigation" data-aos="fade-up">
-      <div class="article-nav-link-wrap left">
-          <img data-src="https://l-mio-qh.github.io/images/covers/cover8.jpeg" data-sizes="auto" alt="单调队列优化dp" class="lazyload">
-        <a href="/2026/03/11/%E6%95%99%E8%82%B2%E6%80%A7%E9%A2%98%E7%9B%AE/%E5%8D%95%E8%B0%83%E9%98%9F%E5%88%97%E4%BC%98%E5%8C%96dp/" aria-label="前一篇: 单调队列优化dp" title="前一篇: 单调队列优化dp"></a>
-        <div class="article-nav-caption">前一篇</div>
-        <h3 class="article-nav-title">
-            单调队列优化dp
-        </h3>
-      </div>
     <div class="article-nav-link-wrap right">
-        <img data-src="https://l-mio-qh.github.io/images/covers/cover5.jpg" data-sizes="auto" alt="观察数学关系找到突破口" class="lazyload">
-      <a href="/2026/03/08/%E6%95%B0%E5%AD%A6/%E8%A7%82%E5%AF%9F%E6%95%B0%E5%AD%A6%E5%85%B3%E7%B3%BB%E6%89%BE%E5%88%B0%E7%AA%81%E7%A0%B4%E5%8F%A3/" aria-label="后一篇: 观察数学关系找到突破口"  title="后一篇: 观察数学关系找到突破口"></a>
+        <img data-src="https://l-mio-qh.github.io/images/covers/cover8.jpeg" data-sizes="auto" alt="单调队列优化dp" class="lazyload">
+      <a href="/2026/03/11/%E6%95%99%E8%82%B2%E6%80%A7%E9%A2%98%E7%9B%AE/%E5%8D%95%E8%B0%83%E9%98%9F%E5%88%97%E4%BC%98%E5%8C%96dp/" aria-label="后一篇: 单调队列优化dp"  title="后一篇: 单调队列优化dp"></a>
       <div class="article-nav-caption">后一篇</div>
       <h3 class="article-nav-title">
-          观察数学关系找到突破口
+          单调队列优化dp
       </h3>
     </div>
   </nav>
@@ -477,14 +468,14 @@ $dp_{i,j}&#x3D;min(dp_{i-1,j},dp_{i,{j-h_i}}+c_i)$<br />
       <script data-pjax>
         window.REIMU_POST = {
           author: "Mio_qh",
-          title: "CF1974E Money Buys Happiness",
-          url: "http://example.com/2026/03/08/dp/CF1974E%20Money%20Buys%20Happiness/",
+          title: "贡献法贪心",
+          url: "http://example.com/2026/03/14/%E6%95%99%E8%82%B2%E6%80%A7%E9%A2%98%E7%9B%AE/%E8%B4%A1%E7%8C%AE%E6%B3%95%E8%B4%AA%E5%BF%83/",
           excerpt: "",
           description: "",
-          stripContent: " 题目传送门  大致思路 注意到题目限制条件快乐值总和$≤10^{5}$ 又 $(1≤m≤50)$,可以想到 $dp$: 记$dp_{i,j}$为在第 $i$ 天获得 $j$ 快乐值的最小花费,于是有: $dp_{i,j}&amp;#x3D;min(dp_{i-1,j},dp_{i,{j-h_i}}+c_i)$ 对于第二项,当且仅当 $h_i≤j$ 且 $c_i+dp_{i,{j-h_i}}≤cur$ 时可以取到 特别地,当 $j&amp;#x3D;&amp;#x3D;h_i$ 时额外判断一下 $dp_{i,h_i}&amp;",
-          date: "Sun Mar 08 2026 15:57:35 GMT+0800",
-          updated: "Sun Mar 08 2026 16:10:10 GMT+0800",
-          cover: "https://l-mio-qh.github.io/images/covers/cover15.jpg",
+          stripContent: " 题目传送门 N题  大致思路 比较相邻两个操作对答案的贡献,记下标 $i,j$ $i$的贡献:$a_j(a_i*x+b_i)+b_j$ $j$的贡献:$a_i(a_j*x+b_j)+b_i$ 即比较 $a_j*b_i+b_j$ 和 $a_i*b_j+b_i$ 写一个自定义排序即可,注意 $a&amp;#x3D;&amp;#x3D;1$ 和 $a&amp;#x3D;&amp;#x3D;0$要特判(放在最前面)  Code 123456789101112131415161718192021222324252627bool cmp",
+          date: "Sat Mar 14 2026 09:56:49 GMT+0800",
+          updated: "Sat Mar 14 2026 10:04:37 GMT+0800",
+          cover: "https://l-mio-qh.github.io/images/covers/cover3.jpeg",
         };
       </script>
         
