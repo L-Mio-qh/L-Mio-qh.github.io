@@ -9,7 +9,7 @@
   
   <script>window.REIMU_CONFIG = {};window.REIMU_CONFIG.icon_font = '4552607_ex15nbittbh';window.REIMU_CONFIG.clipboard_tips = {"success":{"zh-CN":"复制成功 (*^▽^*)"},"fail":{"zh-CN":"复制失败 (ﾟ⊿ﾟ)ﾂ"},"copyright":{"enable":false,"count":50,"license_type":"by-nc-sa"}};window.REIMU_CONFIG.clipboard_tips.copyright.content = '本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！';window.REIMU_CONFIG.code_block = {"expand":true};window.REIMU_CONFIG.base = 'http://example.com';window.REIMU_CONFIG.relative = '/';</script>
   <title>
-    Mio_qh
+    标签: 状态压缩 | Mio_qh
   </title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Mulish:400,400italic,700,700italic|Noto Serif SC:400,400italic,700,700italic&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mulish:400,400italic,700,700italic|Noto Serif SC:400,400italic,700,700italic&display=swap" media="print" onload="this.media='all'">
@@ -19,7 +19,7 @@
 
     <meta property="og:type" content="website">
 <meta property="og:title" content="Mio_qh">
-<meta property="og:url" content="http://example.com/index.html">
+<meta property="og:url" content="http://example.com/tags/%E7%8A%B6%E6%80%81%E5%8E%8B%E7%BC%A9/index.html">
 <meta property="og:site_name" content="Mio_qh">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://example.com/images/banner.webp">
@@ -129,9 +129,10 @@
   <div id="header-outer">
     <div id="header-title">
           <span id="logo">
-            <h1 data-aos="slide-up">Mio_qh</h1>
+            <h1 data-aos="slide-up">标签</h1>
           </span>
         <h2 id="subtitle-wrap" data-aos="slide-down">
+              <span id="subtitle">状态压缩</span>
         </h2>
     </div>
   </div>
@@ -207,81 +208,43 @@
   </div>
 </aside>
 
-          <section id="main" aria-label="Main content">    <div class="post-categories-wrapper" data-aos="fade-up">
-        <div class="post-categories-wrap">
-          <a class="post-link" href="/categories/%E7%AE%97%E6%B3%95%E9%A2%98" aria-label="算法题" title="算法题"></a>
-          <div class="post-categories-cover">
-              <img data-src="https://l-mio-qh.github.io/images/covers/cover1.jpg" data-sizes="auto" alt="算法题" class="lazyload">
-            <h2>算法题</h2>
-            <h3>2 篇文章</h3>
+          <section id="main" aria-label="Main content"><div class="archives-outer-wrap" data-aos="fade-up">
+    <div class="tag-wrap">
+    <div class="archives-tag-list-item" data-aos="zoom-in">
+      <a class="archives-tag-list-link" href="/tags/%E7%8A%B6%E6%80%81%E5%8E%8B%E7%BC%A9/">状态压缩</a>
+    </div>
+    <div class="archives-tag-list-item" data-aos="zoom-in">
+      <a class="archives-tag-list-link" href="/tags/dp/">dp</a>
+    </div>
+    <div class="archives-tag-list-item" data-aos="zoom-in">
+      <a class="archives-tag-list-link" href="/tags/%E5%9B%BE%E8%AE%BA/">图论</a>
+    </div>
+    <div class="archives-tag-list-item" data-aos="zoom-in">
+      <a class="archives-tag-list-link" href="/tags/%E6%9E%84%E9%80%A0/">构造</a>
+    </div>
+</div>
+<div class="category-wrap">
+    <div class="archives-category-list-item" data-aos="zoom-in">
+      <a class="archives-category-list-link" href="/categories/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</a>
+    </div>
+</div>
+        <section class="archives-wrap" data-aos="fade-up">
+          <div class="archive-year-wrap">
+            <a href="/archives/2026" class="archive-year">2026</a>
           </div>
-        </div>
-    </div>
-      <div class="post-wrapper">
-  <div class="post-wrap left" data-aos="fade-up">
-      <a class="post-link" href="/2026/06/05/%E5%88%86%E6%9E%90%E7%8A%B6%E6%80%81,%E7%8A%B6%E6%80%81%E5%8E%8B%E7%BC%A9dp/" aria-label="分析状态,状态压缩dp" title="分析状态,状态压缩dp"></a>
-    <div class="post-cover left">
-        <img data-src="https://l-mio-qh.github.io/images/covers/cover2.jpg" data-sizes="auto" alt="分析状态,状态压缩dp" class="lazyload">
-    </div>
-    <div class="post-info">
-      <div class="post-meta">
-        <span><span class="icon-calendar"></span>2026-06-05</span>
-        <span><span class="icon-pencil"></span>493 字</span>
-        <span><span class="icon-clock"></span>3 分钟</span>
-      </div>
-      <h2 class="post-title">分析状态,状态压缩dp</h2>
-      <article class="post-article">
-           题目传送门
- 大致思路
-挺难想到的一个dp题
-将一个状态拆分如下:
-preprepre: 当前前缀的最后一个口味
-lflflf: 当前后缀的第一个口味
-lastlastlast: 当前后缀的最后一个口味
-由于口味只有5种,我们可以状态压缩:
-status=pre∗36+lf∗6+laststatus=pre*36+lf*6+last
-status=pre∗36+lf∗6+last
-将状态压缩成一个六进制数字( 000 代表空口味,总共有 215215215  种)
-那么,对于一个新的口味有:
-ndp[news]=max(dp[olds]+(x−pre+5)%5,ndp[news])ndp[n
-      </article>
-    </div>
+          <ul>
+            <li class="archive-article">
+  <div class="archive-article-date">
+    <span>
+      <time class="dt-published" datetime="2026-06-05T03:28:41.850Z" itemprop="datePublished">06-05</time>
+    </span>
   </div>
-</div>
-      <div class="post-wrapper">
-  <div class="post-wrap right" data-aos="fade-up">
-      <a class="post-link" href="/2026/05/28/%E7%A5%9E%E7%A7%98%E5%9B%BE%E8%AE%BA%E6%9E%84%E9%80%A0%E9%A2%98(2025FJCPC%20I)/" aria-label="神秘图论构造题(2025FJCPC I)" title="神秘图论构造题(2025FJCPC I)"></a>
-    <div class="post-cover right">
-        <img data-src="https://l-mio-qh.github.io/images/covers/cover1.jpg" data-sizes="auto" alt="神秘图论构造题(2025FJCPC I)" class="lazyload">
-    </div>
-    <div class="post-info">
-      <div class="post-meta">
-        <span><span class="icon-calendar"></span>2026-05-28</span>
-        <span><span class="icon-pencil"></span>551 字</span>
-        <span><span class="icon-clock"></span>3 分钟</span>
-      </div>
-      <h2 class="post-title">神秘图论构造题(2025FJCPC I)</h2>
-      <article class="post-article">
-           题目传送门
- 大致思路
-第一眼:我去这么简单?!
-不是割点,那不就是叶子节点,也就是度数为1吗
-直接一条链串下去,把除了n节点的节点挂在1不就得了,把权值为0在权值为1的情况判无解,天然满足度数条件
-提交,一个大大WA
-为什么???
-不甘心的你发现环中的节点只要不额外向外连连通块,也不是割点,也就是把有解当无解了
-可以把不是割点的所有点(除了n节点,因为这个节点还要给所有割点的那一串链用)串成环,以节点1当中介,连接这个环,和是割点的那一串链
-例如:
-5
-010
-我们可以构造下图
+    <a class="archive-article-title" href="/2026/06/05/%E5%88%86%E6%9E%90%E7%8A%B6%E6%80%81,%E7%8A%B6%E6%80%81%E5%8E%8B%E7%BC%A9dp/">分析状态,状态压缩dp</a>
+</li>
 
- Code
-1234567891011121314151617181920212223242526272829
-      </article>
-    </div>
+          </ul>
+        </section>
   </div>
-</div>
 
 </section>
         </div>
