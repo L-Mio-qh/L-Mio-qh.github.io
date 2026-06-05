@@ -150,7 +150,7 @@
 <div class="sidebar-state">
   <div class="sidebar-state-article">
     <div>文章</div>
-    <div class="sidebar-state-number">1</div>
+    <div class="sidebar-state-number">2</div>
   </div>
   <div class="sidebar-state-category">
     <div>分类</div>
@@ -213,14 +213,45 @@
           <div class="post-categories-cover">
               <img data-src="https://l-mio-qh.github.io/images/covers/cover1.jpg" data-sizes="auto" alt="算法题" class="lazyload">
             <h2>算法题</h2>
-            <h3>1 篇文章</h3>
+            <h3>2 篇文章</h3>
           </div>
         </div>
     </div>
       <div class="post-wrapper">
   <div class="post-wrap left" data-aos="fade-up">
-      <a class="post-link" href="/2026/05/28/%E7%A5%9E%E7%A7%98%E5%9B%BE%E8%AE%BA%E6%9E%84%E9%80%A0%E9%A2%98(2025FJCPC%20I)/" aria-label="神秘图论构造题(2025FJCPC I)" title="神秘图论构造题(2025FJCPC I)"></a>
+      <a class="post-link" href="/2026/06/05/%E5%88%86%E6%9E%90%E7%8A%B6%E6%80%81,%E7%8A%B6%E6%80%81%E5%8E%8B%E7%BC%A9dp/" aria-label="神秘图论构造题(2025FJCPC I)" title="神秘图论构造题(2025FJCPC I)"></a>
     <div class="post-cover left">
+        <img data-src="https://l-mio-qh.github.io/images/covers/cover2.jpg" data-sizes="auto" alt="神秘图论构造题(2025FJCPC I)" class="lazyload">
+    </div>
+    <div class="post-info">
+      <div class="post-meta">
+        <span><span class="icon-calendar"></span>2026-06-05</span>
+        <span><span class="icon-pencil"></span>493 字</span>
+        <span><span class="icon-clock"></span>3 分钟</span>
+      </div>
+      <h2 class="post-title">神秘图论构造题(2025FJCPC I)</h2>
+      <article class="post-article">
+           题目传送门
+ 大致思路
+挺难想到的一个dp题
+将一个状态拆分如下:
+preprepre: 当前前缀的最后一个口味
+lflflf: 当前后缀的第一个口味
+lastlastlast: 当前后缀的最后一个口味
+由于口味只有5种,我们可以状态压缩:
+status=pre∗36+lf∗6+laststatus=pre*36+lf*6+last
+status=pre∗36+lf∗6+last
+将状态压缩成一个六进制数字( 000 代表空口味,总共有 215215215  种)
+那么,对于一个新的口味有:
+ndp[news]=max(dp[olds]+(x−pre+5)%5,ndp[news])ndp[n
+      </article>
+    </div>
+  </div>
+</div>
+      <div class="post-wrapper">
+  <div class="post-wrap right" data-aos="fade-up">
+      <a class="post-link" href="/2026/05/28/%E7%A5%9E%E7%A7%98%E5%9B%BE%E8%AE%BA%E6%9E%84%E9%80%A0%E9%A2%98(2025FJCPC%20I)/" aria-label="神秘图论构造题(2025FJCPC I)" title="神秘图论构造题(2025FJCPC I)"></a>
+    <div class="post-cover right">
         <img data-src="https://l-mio-qh.github.io/images/covers/cover1.jpg" data-sizes="auto" alt="神秘图论构造题(2025FJCPC I)" class="lazyload">
     </div>
     <div class="post-info">
@@ -271,10 +302,10 @@
       </div>
       <div>
         <span class="icon-brush"></span>
-        551
+        1k
         &nbsp;|&nbsp;
         <span class="icon-coffee"></span>
-        00:03
+        00:06
       </div>
       <div>
         <span class="icon-eye"></span>
@@ -302,7 +333,7 @@
 <div class="sidebar-state">
   <div class="sidebar-state-article">
     <div>文章</div>
-    <div class="sidebar-state-number">1</div>
+    <div class="sidebar-state-number">2</div>
   </div>
   <div class="sidebar-state-category">
     <div>分类</div>
